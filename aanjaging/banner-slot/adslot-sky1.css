@@ -1,0 +1,17 @@
+#dfp-sky1.teaser.teaser-advertisement {
+    background: #fff;
+}
+
+#dfp-sky1.teaser.teaser-advertisement .ad--title {
+    display: none;
+}
+
+div#dfp-sky1 {
+    background: #fff;
+}
+
+div#dfp-sky1.ad--sky {
+    background: #f1f1f1;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+}

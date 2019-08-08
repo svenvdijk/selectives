@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+<section class="native_carousel__container native_carousel__volkskrant">
+    <header>
+        <!-- <sub class="native-carousel__disclaimer">Wat is dit?</sub> -->
+        <h1 class="native-carousel__title">Partnerbijdrage</h1>
+    </header>
+    {{#each creatives}}
+    <div class="native-carousel__wrapper" data-nameInCollection="{{nameInCollection}}">
+        <article class="branded-aankeiler branded-aankeiler--volkskrant branded-aankeiler-square native-carousel-entry" data-position="" data-column-size="">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <a href="{{link}}">
+                <div class="wrapper">
+                    <div class="image-wrapper">
+                        <picture>
+                            <source srcset="{{getThumbHref width=560 height=560}}" data-size="full" data-col="0">
+                            <source srcset="{{getThumbHref width=920 height=600}}" data-size="full" data-col="3">
+                            <source srcset="{{getThumbHref width=1240 height=600}}" data-size="full" data-col="4">
+                            <source srcset="{{getThumbHref width=560 height=280}}" data-size="half" data-col="0">
+                            <source srcset="{{getThumbHref width=920 height=391}}" data-size="half" data-col="3">
+                            <source srcset="{{getThumbHref width=1240 height=391}}" data-size="half" data-col="4">
+                        </picture>
+                    </div>
+                    <div class="content-wrapper gradient">
+                        <sub class="label label--volkskrant dark"><span>{{custom.label-vk}} </span>{{sponsor.name}}</sub>
+                        <header class="title">{{title}}</header>
+                    </div>
+                </div>
+            </a>
+        </article>
+        {{/each}}
+    </div>
+    <div class="native-read-more native-read-more--volkskrant">
+        <div class="native-read-more__wrapper">
+            <a href="">Meer Partnerbijdrage</a>
+        </div>
+    </div>
+</section>
+    <script src="./js/grid.js"></script>
+    <script src="./js/master.js"></script>
+</body>
+</html>
