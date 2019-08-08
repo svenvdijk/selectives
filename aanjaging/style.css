@@ -3,6 +3,8 @@
     border: none;
 }
 
+/*test*/
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap'); /* Google Font Roboto */
 
 /*******************************************************************************************************************************
@@ -83,6 +85,8 @@
         text-indent: 16px;
         background-color: #fff;
         padding: 0 5px 0 0;
+        position: relative;
+        z-index: 99;
     }
 
     .native_carousel__container.native_carousel__trouw header.carousel-header::after {
@@ -94,7 +98,7 @@
         position: absolute;
         left: 0;
         bottom: 38px;
-        z-index: -1;
+        z-index: 0;
     }
 
     .native_carousel__container.native_carousel__trouw header.carousel-header sub { /* Trouw */
@@ -152,7 +156,7 @@
     .native_carousel__container.native_carousel__parool header div.arrow-container,
     .native_carousel__container.native_carousel__trouw header div.arrow-container {
         position: absolute;
-
+        z-index: 99;
     } .native_carousel__container.native_carousel__parool header div.arrow-container {
         right: 16px;
         top: -14px;
@@ -640,7 +644,7 @@ div.native-carousel__wrapper article { /* Articles */
     }   
     .native_carousel__container.native_carousel__trouw .native-carousel__wrapper {
         width: 945px;
-        padding-left: 0px;
+        padding-left: 6px;
     }
 
     .native_carousel__container.native_carousel__trouw header.carousel-header h1 {

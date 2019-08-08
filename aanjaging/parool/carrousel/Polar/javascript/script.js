@@ -195,7 +195,7 @@ function(renderContext) {
 
     setTimeout(function() {
         $('.slick-active', renderContext.$template).lastBorder();
-    },200)
+    }, 200)
     
 
     // End of Vertical Border on last visible object
