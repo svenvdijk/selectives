@@ -26,13 +26,15 @@
         font-family: 'Roboto',Arial,Helvetica Neue,Helvetica,"sans-serif";
         letter-spacing: -0.3px;
     }
-    .native_carousel__container.native_carousel__parool > header { /* Parool */
+    .native_carousel__container.native_carousel__parool  header.carousel-header { /* Parool */
         border-bottom: 6px solid black;
         margin: 0 20px;
+        position: relative;
     }
 
-    .native_carousel__container.native_carousel__parool header h1 { /* Parool */
-        font-size: 28px;
+    .native_carousel__container.native_carousel__parool header.carousel-header h1 { /* Parool */
+        font-size: 29px;
+        line-height: 1;
         font-weight: 900;
         margin: 0 0 10px;
     }
@@ -68,12 +70,13 @@
     .native_carousel__container.native_carousel__trouw > header { /* Trouw */ 
         position: relative;
         width: 100%;
-
-    } .native_carousel__container.native_carousel__trouw .native-carousel__wrapper {
+    } 
+    .native_carousel__container.native_home-carrousel.native_carousel__trouw .carousel-header {
+        margin: 0 0 0 10px;
+    }
+    .native_carousel__container.native_carousel__trouw .native-carousel__wrapper {
         width: 100%;
-        border-left: 1px solid #111;
         padding-top: 10px;
-        padding-left: 6px;
     }
 
     .native_carousel__container.native_carousel__trouw header.carousel-header h1 { /* Trouw */
@@ -82,18 +85,17 @@
         line-height: 65px;
         display: inline;
         margin: 0;
-        text-indent: 16px;
         background-color: #fff;
         padding: 0 5px 0 0;
         position: relative;
-        z-index: 99;
+        z-index: 2;
     }
 
     .native_carousel__container.native_carousel__trouw header.carousel-header::after {
         bottom: 59px;
         content: "";
         height: 1px;
-        width: calc(100% - 5px);
+        width: 100%;
         background-color: #000;
         position: absolute;
         left: 0;
@@ -156,10 +158,10 @@
     .native_carousel__container.native_carousel__parool header div.arrow-container,
     .native_carousel__container.native_carousel__trouw header div.arrow-container {
         position: absolute;
-        z-index: 99;
+        z-index: 2;
     } .native_carousel__container.native_carousel__parool header div.arrow-container {
-        right: 16px;
-        top: -14px;
+        right: 0;
+        bottom: 14px;
     } .native_carousel__container.native_carousel__trouw header div.arrow-container {
         right: 0;
         top: 0;
@@ -180,7 +182,7 @@ div.native-carousel__wrapper {
     font-size: 0;
 }
 
-div.native-carousel__wrapper::after { /* Border Bottom */
+section.native_carousel__container:not(.native_carousel__trouw) div.native-carousel__wrapper::after { /* Border Bottom */
     content: '';
     width: calc(100% - 40px);
     border-bottom: 1px solid #eaeaea;
@@ -188,17 +190,6 @@ div.native-carousel__wrapper::after { /* Border Bottom */
     position: absolute;
     bottom: 0;
     left: 20px;
-}
-
-.native_carousel__container.native_home-carrousel.native_carousel__trouw div.native-carousel__wrapper::after { /* Trouw Border Bottom */
-    content: '';
-    width: calc(100% - 10px);
-    border-bottom: 1px solid #111;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: auto;
 }
 
 .native-grid-adjustment {
@@ -322,16 +313,6 @@ div.native-carousel__wrapper article { /* Articles */
     .arrow:first-of-type {
         margin-right: 20px;
     }
-
-    /********************
-    Carousel HEADER
-    */
-    .native_carousel__container.native_carousel__parool header.carousel-header h1 { /* Parool */
-        font-size: 46px;
-    }
-    /*
-    End of Carousel HEADER
-    ********************/
 
     section.native_carousel__container.native_carousel__trouw {
         width: 630px;
@@ -563,6 +544,16 @@ div.native-carousel__wrapper article { /* Articles */
                             height: 280px;
                             width: 600px !important;
                         }
+                        /********************
+                        Carousel HEADER
+                        */
+                        .native_carousel__container.native_carousel__parool header.carousel-header h1 { /* Parool */
+                            font-size: 67px;
+                            line-height: 1em;
+                        }
+                        /*
+                        End of Carousel HEADER
+                        ********************/
             /* End of Parool Homepage Carousel */
 
             /* Trouw Homepage Carousel */
@@ -578,6 +569,9 @@ div.native-carousel__wrapper article { /* Articles */
                     }   section.native_carousel__container.native_carousel__trouw div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--trouw.hmp-carousel[data-col="4"] {
                             height: 295px;
                             width: 610px !important;
+                        }
+                        .native_carousel__container.native_home-carrousel.native_carousel__trouw .carousel-header {
+                            width: 610px;
                         }
             /* End of Trouw Homepage Carousel */
 
@@ -633,6 +627,27 @@ div.native-carousel__wrapper article { /* Articles */
             }   section.native_carousel__container.native_carousel__trouw div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--trouw.hmp-carousel[data-col="4"] {
                     height: 295px;
                     width: 930px !important;
+                }
+                .native_carousel__container.native_home-carrousel.native_carousel__trouw .carousel-header {
+                    margin: 0;
+                    
+                }
+                .native_carousel__container.native_carousel__trouw .native-carousel__wrapper {
+                    border-left: 1px solid #111;
+                    padding-left: 6px;
+                }
+                .native_carousel__container.native_home-carrousel.native_carousel__trouw .carousel-header {
+                    width: 100%;
+                }
+                .native_carousel__container.native_home-carrousel.native_carousel__trouw div.native-carousel__wrapper::after { /* Trouw Border Bottom */
+                    content: '';
+                    width: calc(100% - 10px);
+                    border-bottom: 1px solid #111;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: auto;
                 }
     /* End of Trouw Homepage Carousel */
 
@@ -861,7 +876,7 @@ div.native-carousel__wrapper article { /* Articles */
                     width: 930px !important;
                 }   section.native_carousel__container.native_carousel__trouw div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--trouw.hmp-carousel[data-col="4"] {
                         height: 295px;
-                        width: 1250px !important;
+                        width: 1240px !important;
                     }
 
         .native_carousel__container.native_carousel__trouw {
