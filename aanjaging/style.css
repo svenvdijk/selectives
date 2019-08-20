@@ -3,8 +3,6 @@
     border: none;
 }
 
-/*test*/
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap'); /* Google Font Roboto */
 
 /*******************************************************************************************************************************
@@ -52,10 +50,17 @@
         margin: 0 20px;
     }
 
-    .native_carousel__container.native_carousel__volkskrant header h1 { /* Volkskrant */
+    .native_carousel__container.native_carousel__volkskrant  header.carousel-header { /* Parool */
+        border-bottom: 1px solid #eaeaea;
+        margin: 0 20px;
+        position: relative;
+    }
+
+    .native_carousel__container.native_carousel__volkskrant header.carousel-header h1 { /* Volkskrant */
         font-size: 32px;
+        line-height: 35px;
         color: #eebe01;
-        font-weight: 900;
+        font-weight: 700;
         margin: 0 0 10px;
     }
 
@@ -155,11 +160,15 @@
         float: right;
     } */
 
+    .native_carousel__container.native_carousel__volkskrant header div.arrow-container,
     .native_carousel__container.native_carousel__parool header div.arrow-container,
     .native_carousel__container.native_carousel__trouw header div.arrow-container {
         position: absolute;
         z-index: 2;
-    } .native_carousel__container.native_carousel__parool header div.arrow-container {
+    } .native_carousel__container.native_carousel__volkskrant header div.arrow-container {
+        right: 0;
+        bottom: 5px;
+    }.native_carousel__container.native_carousel__parool header div.arrow-container {
         right: 0;
         bottom: 14px;
     } .native_carousel__container.native_carousel__trouw header div.arrow-container {
@@ -529,6 +538,21 @@ div.native-carousel__wrapper article { /* Articles */
     */
 }
 @media screen and (min-width: 640px) {
+            /* Volkskrant Homepage Carousel */
+            section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--volkskrant.hmp-carousel[data-col="1"] {
+                height: 280px;
+                width: 280px !important;
+            }   section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--volkskrant.hmp-carousel[data-col="2"] {
+                    height: 280px;
+                    width: 600px !important;
+                }   section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--volkskrant.hmp-carousel[data-col="3"] {
+                        height: 280px;
+                        width: 600px !important;
+                    }   section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--volkskrant.hmp-carousel[data-col="4"] {
+                            height: 280px;
+                            width: 600px !important;
+                        }
+            /* End of Volkskrant Homepage Carousel */
 
             /* Parool Homepage Carousel */
             section.native_carousel__container.native_carousel__parool div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--parool.hmp-carousel[data-col="1"] {
@@ -598,6 +622,21 @@ div.native-carousel__wrapper article { /* Articles */
 }
 
 @media screen and (min-width: 960px) {
+        /* Volkskrant Homepage Carousel */
+        section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--volkskrant.hmp-carousel[data-col="1"] {
+            height: 280px;
+            width: 280px !important;
+        }   section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--volkskrant.hmp-carousel[data-col="2"] {
+                height: 280px;
+                width: 600px !important;
+            }   section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--volkskrant.hmp-carousel[data-col="3"] {
+                    height: 280px;
+                    width: 920px !important;
+                }   section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--volkskrant.hmp-carousel[data-col="4"] {
+                        height: 280px;
+                        width: 920px !important;
+                    }
+        /* End of Volkskrant Homepage Carousel */
     /* Parool Homepage Carousel */
     section.native_carousel__container.native_carousel__parool div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--parool.hmp-carousel[data-col="1"] {
         height: 280px;
@@ -847,6 +886,21 @@ div.native-carousel__wrapper article { /* Articles */
 }
 
 @media screen and (min-width: 1320px) {
+        /* Volkskrant Homepage Carousel */
+        section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--volkskrant.hmp-carousel[data-col="1"] {
+            height: 280px;
+            width: 280px !important;
+        }   section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--volkskrant.hmp-carousel[data-col="2"] {
+                height: 280px;
+                width: 600px !important;
+            }   section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--volkskrant.hmp-carousel[data-col="3"] {
+                    height: 280px;
+                    width: 920px !important;
+                }   section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--volkskrant.hmp-carousel[data-col="4"] {
+                        height: 280px;
+                        width: 1240px !important;
+                    }
+        /* End of Volkskrant Homepage Carousel */
 
         /* Parool Homepage Carousel */
         section.native_carousel__container.native_carousel__parool div.native-carousel__wrapper article.branded-aankeiler.branded-aankeiler--parool.hmp-carousel[data-col="1"] {
@@ -1127,8 +1181,8 @@ article.branded-aankeiler.branded-aankeiler--parool.hmp-carousel.branded-aankeil
     height: auto;
 }
 
-article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square,
-article:not(.hmp-carousel).branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-square {
+article:not(.hmp-carousel).branded-aankeiler.branded-aankeiler-square { /*
+    article:not(.hmp-carousel).branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-square*/
     height: auto;
     padding: 15px;
 }
@@ -1178,6 +1232,10 @@ article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-rectangle {
 article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-rectangle { /* Volkskrant | This is for the 300x600 banner */
     height: 600px;
     Width: 300px;
+}
+
+.branded-aankeiler.branded-aankeiler-rectangle.half a div.wrapper {
+    height: 100%;
 }
 
 /*
@@ -1531,9 +1589,10 @@ article.branded-aankeiler.full a div .content-wrapper.top.gradient {
         padding: 0;
         position: relative;
     } article.branded-aankeiler.branded-aankeiler-square.full,
+      article:not(.hmp-carousel).branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-square.full
       article.branded-aankeiler.branded-aankeiler-square.hmp-carousel.native-carousel-entry.full  {
         height: 280px;
-        width: 280px;; 
+        width: 280px;
         margin: 0;
     } article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.full {
         height: 295px;
