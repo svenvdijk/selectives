@@ -1,4 +1,4 @@
-var firstTile = 4; // from mediavoice!
+var firstTile = 3; // from mediavoice!
 var advertiser = 'ONVZ'; // from mediavoice!
 var col = firstTile;
 

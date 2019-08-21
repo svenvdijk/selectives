@@ -1,9 +1,8 @@
-var teaserSize = 'full'; // renderContext.fill.creatives[0].custom.selectiveTeaser;
+var teaserSize = 'half'; // renderContext.fill.creatives[0].custom.selectiveTeaser;
 var textPosition = 'center'; // renderContext.fill.creatives[0].custom.selectiveAlignText;
 var contentPosition = 'center'; // renderContext.fill.creatives[0].custom.selectiveContentPosition;
 
 $.fn.teaser = function() {
-    console.log(this)
     $(this).addClass(teaserSize);
     $(this).find('.image-wrapper picture').addClass(teaserSize);
 }
@@ -11,20 +10,53 @@ $('.branded-aankeiler').teaser();
 
 $.fn.textAlign = function() {
     var text = $(this).children();
-    var articleClassList = $(this).parent('.wrapper').parent('a').parent('article.branded-aankeiler')[0].classList;
+    var articleClassList = $(this).parent().parent().parent('article.branded-aankeiler')[0].classList;
 
     for(var i = 0; i < articleClassList.length; i++) { // iterate over classes
         if(articleClassList[i] == 'full') { // See if the class 'full' is present
-            console.log(articleClassList[i])
             for(var i = 0; i < text.length; i++) {
                 $(text[i]).css({ 'text-align': textPosition });
             }
             $(this).addClass(contentPosition);
-            break
         }
     }
 }
 $('.content-wrapper').textAlign();
+
+$.fn.responsiveImage = function() {
+    // var imageWidth = $(this).width();
+    // var halfImageHeight = imageWidth / 2;
+    // var article = $(this).parent('.wrapper').parent('a').parent('.branded-aankeiler');
+    // article.class = article[0].classList;
+    // article.class.half = article.class.contains('half');
+    // article.class.full = article.class.contains('full');
+
+    // console.log(article.data)
+
+
+    // var source;
+    // // console.log(this)
+
+    // for(i = 0; i < this.length; i++) {
+    //     source = $(this[i]).children().children();
+
+    //     for(x = 0; x < source.length; x++) {
+    //         // console.log(source[x])
+    //     }
+    // }
+
+
+
+
+    // if(article.class.half && $(window).width() < 640) {
+    //     $(this).css({'height': + halfImageHeight + 'px'});
+    // }
+    // if(article.class.half && $(window).width() >= 640) {
+    //     $(this).css({'height': '50%'});
+    // } 
+}
+
+$('.image-wrapper').responsiveImage(); // Must be changed on window width
 
 $.fn.carousel = function() {
 
@@ -108,6 +140,7 @@ $.fn.carousel = function() {
     // Slick slider
     $(this).slick({
         arrows: false,
+        infinite: false,
         responsive: 
         [
             {
@@ -131,12 +164,29 @@ $.fn.carousel = function() {
         ]
     });
 
+
+
     // Vertical Border on last visible object.
 
     $.fn.lastBorder = function() {
         var last = this.length - 1;
         var i;
-        
+
+        var firstArticle = articles.first()[0].attributes['aria-hidden'].value;
+        var lastArticle = articles.last()[0].attributes['aria-hidden'].value;
+
+        if(lastArticle == 'false') {
+            $('#right-arrow').css({'fill': '#f1f1f1'})
+        } else {
+            $('#right-arrow').css({'fill': '#000'})
+        }
+        if(firstArticle == 'false') {
+            $('#left-arrow').css({'fill': '#f1f1f1'})
+        } else {
+            $('#left-arrow').css({'fill': '#000'})
+        }
+
+        // Last border
         for( i = 0; i < this.length; i++ ){
             if(i == last) {
                 $(this[i]).addClass('last-active');
@@ -166,11 +216,10 @@ $.fn.carousel = function() {
 
 $('.responsive').carousel();
 
-
 $.fn.image = function() {
-    var articles = [];
-    var source;
-    var srcset;
+    var articles = []
+    var source
+    var srcset
 
     for(i = 0; i < this.length; i++) {
         articles.push(this[i]);
@@ -200,11 +249,8 @@ $.fn.image = function() {
         }
 
         picture = $(element).find('picture')[0];
-        $(picture).css({'background' : 'url(' + srcset + ') no-repeat', 'background-size' : 'cover'});
+        $(picture).css({'background' : 'url(' + srcset + ') no-repeat'});
     });
-    // articles.forEach(element => {
-    //     source
-    // });
 }
 
 $('.branded-aankeiler.hmp-carousel').image();

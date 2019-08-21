@@ -140,6 +140,7 @@ $.fn.carousel = function() {
     // Slick slider
     $(this).slick({
         arrows: false,
+        infinite: false,
         responsive: 
         [
             {
@@ -163,12 +164,29 @@ $.fn.carousel = function() {
         ]
     });
 
+
+
     // Vertical Border on last visible object.
 
     $.fn.lastBorder = function() {
         var last = this.length - 1;
         var i;
-        
+
+        var firstArticle = articles.first()[0].attributes['aria-hidden'].value;
+        var lastArticle = articles.last()[0].attributes['aria-hidden'].value;
+
+        if(lastArticle == 'false') {
+            $('#right-arrow').css({'fill': '#f1f1f1'})
+        } else {
+            $('#right-arrow').css({'fill': '#000'})
+        }
+        if(firstArticle == 'false') {
+            $('#left-arrow').css({'fill': '#f1f1f1'})
+        } else {
+            $('#left-arrow').css({'fill': '#000'})
+        }
+
+        // Last border
         for( i = 0; i < this.length; i++ ){
             if(i == last) {
                 $(this[i]).addClass('last-active');
@@ -197,7 +215,6 @@ $.fn.carousel = function() {
 }
 
 $('.responsive').carousel();
-
 
 $.fn.image = function() {
     var articles = []

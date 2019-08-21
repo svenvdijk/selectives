@@ -3,33 +3,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>humo Carousel</title>
+    <title>Volkskrant Carousel</title>
     <link rel="stylesheet" href="../../style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
-<body style="margin: 0;">              
-    <section class="native_carousel__container native_home-carrousel native_carousel__humo">
+<body>              
+    <section class="native_carousel__container native_home-carrousel native_carousel__volkskrant">
         <header class="carousel-header">
             <div class="arrow-container" aria-hidden="false">
-                    <input id="slider_left" type="radio" name="slider" checked class="btn_left btn_slide hidden" aria-label="Previous">
-                    <input id="slider_right" type="radio" name="slider" class="btn_right btn_slide" aria-label="Next" data-active="active">
-                    <div class="arrow-wrapper">
-                        <!-- Previous arrow -->
-                        <label class="arrow arrow-previous" for="slider_left" data-active="active">
-                                <svg version="1.1" id="left-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 52 52" style="enable-background:new 0 0 52 52;" xml:space="preserve"><g><g id="chevron-left"><polygon points="36,52 42,45.9 22.1,26 42,6.1 36,0 10,26"/></g></g></svg>
-                        </label>
-    
-                        <!-- Next arrow -->   
-                        <label class="arrow arrow-next" for="slider_right" data-active="active">
-                            <svg version="1.1" id="right-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 52 52" style="enable-background:new 0 0 52 52;" xml:space="preserve"><g><g id="chevron-right"><polygon points="16,0 10,6.1 29.9,26 10,45.9 16,52 42,26"/></g></g></svg>
-                        </label>
-                    </div>
+
+                
+                <input id="slider_left" type="radio" name="slider" checked class="btn_left btn_slide hidden" aria-label="Previous">
+                <input id="slider_right" type="radio" name="slider" class="btn_right btn_slide" aria-label="Next" data-active="active">
+                <div class="arrow-wrapper">
+                    <!-- Previous arrow -->
+                    <label class="arrow arrow-previous" for="slider_left" data-active="active">
+                            <svg version="1.1" id="left-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 78.9 147.4" style="enable-background:new 0 0 78.9 147.4;" xml:space="preserve"><polygon points="62.1,11 70.2,2.9 73.1,0 76,2.9 76,2.9 76,2.9 78.9,5.8 67.9,16.8 67.9,16.8 11,73.7 73.2,136 78.9,141.6 73.1,147.4 62,136.3 62,136.3 0,73.7 "/></svg>
+                    </label>
+
+                    <!-- Next arrow -->   
+                    <label class="arrow arrow-next" for="slider_right" data-active="active">
+                            <svg version="1.1" id="right-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 78.9 147.4" style="enable-background:new 0 0 78.9 147.4;" xml:space="preserve"><polygon points="16.8,136.4 8.6,144.5 5.8,147.4 2.9,144.5 2.9,144.5 2.9,144.5 0,141.6 11,130.6 11,130.6 67.9,73.7 5.7,11.4 0,5.8 5.8,0 16.9,11.1 16.9,11.1 78.9,73.7 "/></svg>
+                    </label>
+                </div>
+
             </div>
-            <h1 class="native-carousel__title">Partnerbijdrage</h1>
-            <h3 class="native-carousel__subtitle"> <span>Subtitle over brandedcontent</span></h3>
+            <h1 class="native-carousel__title">partnerbijdrage</h1>
         </header>
         <div class="native-carousel__wrapper responsive">
-            <article class="branded-aankeiler branded-aankeiler--humo branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="" data-id="{{nameInCollection}}">
+ 
+            <article class="branded-aankeiler branded-aankeiler--volkskrant branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <a href="#">
@@ -48,38 +51,13 @@
                             </picture>
                         </div>
                         <div class="content-wrapper gradient">
-                            <sub class="label label--humo dark"><span>aangeboden door</span> label</sub>
+                            <sub class="label label--volkskrant dark"><span>aangeboden door</span> label</sub>
                             <header class="title">Hiddema: 'Otten pakte partijgeld niet met kwade bedoelingen'</header>
                         </div>
                     </div>
                 </a>
             </article>
-            <article class="branded-aankeiler branded-aankeiler--humo branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <a href="#">
-                    <div class="wrapper">
-                        <div class="image-wrapper">
-                            <picture>
-                                <source srcset="../../images/280x280.jpg" data-size="full" data-col="1">   
-                                <source srcset="../../images/600x280.jpg" data-size="full" data-col="2">
-                                <source srcset="../../images/920x280.jpg" data-size="full" data-col="3">
-                                <source srcset="../../images/1240x280.jpg" data-size="full" data-col="4">
-
-                                <source srcset="../../images/280x140.jpg" data-size="half" data-col="1">
-                                <source srcset="../../images/600x140.jpg" data-size="half" data-col="2">
-                                <source srcset="../../images/920x140.jpg" data-size="half" data-col="3">
-                                <source srcset="../../images/1240x140.jpg" data-size="half" data-col="4">
-                            </picture>
-                        </div>
-                        <div class="content-wrapper gradient">
-                            <sub class="label label--humo dark"><span>aangeboden door</span> label</sub>
-                            <header class="title">Hiddema: 'Otten pakte partijgeld niet met kwade bedoelingen'</header>
-                        </div>
-                    </div>
-                </a>
-            </article>
-            <article class="branded-aankeiler branded-aankeiler--humo branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
+            <article class="branded-aankeiler branded-aankeiler--volkskrant branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <a href="#">
@@ -98,13 +76,14 @@
                             </picture>
                         </div>
                         <div class="content-wrapper gradient">
-                            <sub class="label label--humo dark"><span>aangeboden door</span> label</sub>
+                            <sub class="label label--volkskrant dark"><span>aangeboden door</span> label</sub>
                             <header class="title">Hiddema: 'Otten pakte partijgeld niet met kwade bedoelingen'</header>
                         </div>
                     </div>
                 </a>
             </article>
-            <!-- <article class="branded-aankeiler branded-aankeiler--humo branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
+            
+            <article class="branded-aankeiler branded-aankeiler--volkskrant branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <a href="#">
@@ -123,13 +102,13 @@
                             </picture>
                         </div>
                         <div class="content-wrapper gradient">
-                            <sub class="label label--humo dark"><span>aangeboden door</span> label</sub>
+                            <sub class="label label--volkskrant dark"><span>aangeboden door</span> label</sub>
                             <header class="title">Hiddema: 'Otten pakte partijgeld niet met kwade bedoelingen'</header>
                         </div>
                     </div>
                 </a>
-            </article> -->
-            <!-- <article class="branded-aankeiler branded-aankeiler--humo branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
+            </article>
+            <!-- <article class="branded-aankeiler branded-aankeiler--volkskrant branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <a href="#">
@@ -148,7 +127,7 @@
                             </picture>
                         </div>
                         <div class="content-wrapper gradient">
-                            <sub class="label label--humo dark"><span>aangeboden door</span> label</sub>
+                            <sub class="label label--volkskrant dark"><span>aangeboden door</span> label</sub>
                             <header class="title">Hiddema: 'Otten pakte partijgeld niet met kwade bedoelingen'</header>
                         </div>
                     </div>
