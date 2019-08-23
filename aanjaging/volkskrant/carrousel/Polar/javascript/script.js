@@ -45,23 +45,6 @@ function(renderContext) {
     // End of Grid Function.
     ///////////////////////////////////////////////////////////////////////
 
-    $.fn.responsiveImage = function() {
-        var imageWidth = $(this).width();
-        var halfImageHeight = imageWidth / 2;
-        var article = $(this).parent('.wrapper').parent('a').parent('.branded-aankeiler');
-        article.class = article[0].classList;
-        article.class.half = article.class.contains('half');
-    
-        if(article.class.half && $(window.top).width() < 640) {
-            $(this).css({'height': + halfImageHeight + 'px'});
-        }
-        if(article.class.half && $(window.top).width() >= 640) {
-            $(this).css({'height': '50%'});
-        } 
-    }
-    
-    $('.image-wrapper', renderContext.$template).responsiveImage(); // Must be changed on window width
-
     $.fn.carousel = function() {
         console.log('carousel function activated')
 
@@ -148,6 +131,7 @@ function(renderContext) {
             console.log('SlickJS loaded correctly')
             $('.responsive', renderContext.$template).slick({
                 arrows: false,
+              	infinite: false,
                 responsive: 
                 [
                     {
@@ -179,6 +163,21 @@ function(renderContext) {
     $.fn.lastBorder = function() {
         var last = this.length - 1;
         var i;
+      
+      	var articles = $('article', renderContext.$template);
+      	var firstArticle = articles.first()[0].attributes['aria-hidden'].value;
+        var lastArticle = articles.last()[0].attributes['aria-hidden'].value;
+
+        if(lastArticle == 'false') {
+            $('#right-arrow', renderContext.$template).css({'fill': '#f1f1f1'})
+        } else {
+            $('#right-arrow', renderContext.$template).css({'fill': '#000'})
+        }
+        if(firstArticle == 'false') {
+            $('#left-arrow', renderContext.$template).css({'fill': '#f1f1f1'})
+        } else {
+            $('#left-arrow', renderContext.$template).css({'fill': '#000'})
+        }
         
         for( i = 0; i < this.length; i++ ){
             if(i == last) {
@@ -196,7 +195,6 @@ function(renderContext) {
     setTimeout(function() {
         $('.slick-active', renderContext.$template).lastBorder();
     },400)
-    
 
     // End of Vertical Border on last visible object
     $('.arrow-next', renderContext.$template).click(function(){
@@ -218,8 +216,6 @@ function(renderContext) {
         }
         articles.forEach(element => {
             article = element;
-    
-            // console.log($(article)[0].attributes)
             article.dataCol = $(article)[0].attributes['data-col'].value;
     
             if($(article)[0].classList.contains('half')) {
@@ -231,10 +227,9 @@ function(renderContext) {
             var sources  = $(element).find('picture').children();
             for(i = 0; i < sources.length; i++) {
                 source = sources[i];
-                // console.log($(source)[0].attributes)
                 source.dataCol = $(source)[0].attributes['data-col'].value;
                 source.dataSize = $(source)[0].attributes['data-size'].value;
-    
+    						
                 if(source.dataCol == article.dataCol && source.dataSize == article.dataSize) {
                     srcset = source.attributes['srcset'].value;
                 }
@@ -244,6 +239,6 @@ function(renderContext) {
             $(picture).css({'background' : 'url(' + srcset + ') no-repeat', 'background-size' : 'cover'});
         });
     }
-    
-    $('.branded-aankeiler.hmp-carousel', renderContext.$template).image();
+
+    	$('.branded-aankeiler.hmp-carousel', renderContext.$template).image();
 }

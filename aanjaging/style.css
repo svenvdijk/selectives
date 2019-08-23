@@ -120,17 +120,20 @@
 
     /* Header HUMO */
 
+
+    .native_carousel__container.native_carousel__humo header.carousel-header {
+        position: relative;
+        margin: 0 20px 10px;
+    }
+
     .native_carousel__container.native_carousel__humo header.carousel-header h1.native-carousel__title { /* Humo */
-        text-align: center;
+        text-align: left;
         font-size: 44px;
         font-weight: 100;
         line-height: 65px;
         margin: 0;
-        background-color: #fff;
-        padding: 0 5px 0 0;
         position: relative;
-        z-index: 2;
-        margin: 0 0 10px 0;
+        z-index: 1;
     }
 
     .native_carousel__container.native_carousel__humo header.carousel-header h3.native-carousel__subtitle { /* Humo */
@@ -141,13 +144,12 @@
         font-weight: 700;
         line-height: 15px;
         position: relative;
-        margin: 0;
+        margin: 10px 0 0 0;
     }
 
     .native_carousel__container.native_carousel__humo header.carousel-header h3.native-carousel__subtitle::before { /* Humo */
         content: "";
-        margin-left: 20px;
-        width: calc(100% - 40px);
+        width: 100%;
         height: 3px;
         background-color: #000;
         top: calc(50% - 1.5px);
@@ -210,13 +212,16 @@
 
     .native_carousel__container.native_carousel__volkskrant header div.arrow-container,
     .native_carousel__container.native_carousel__parool header div.arrow-container,
-    .native_carousel__container.native_carousel__trouw header div.arrow-container {
+    .native_carousel__container.native_carousel__trouw header div.arrow-container,
+    .native_carousel__container.native_carousel__humo header div.arrow-container,
+    .native_carousel__container.native_carousel__demorgen header div.arrow-container {
         position: absolute;
         z-index: 2;
     } .native_carousel__container.native_carousel__volkskrant header div.arrow-container {
         right: 0;
         bottom: 5px;
-    }.native_carousel__container.native_carousel__parool header div.arrow-container {
+    }.native_carousel__container.native_carousel__parool header div.arrow-container,
+      .native_carousel__container.native_carousel__humo header div.arrow-container {
         right: 0;
         bottom: 14px;
     } .native_carousel__container.native_carousel__trouw header div.arrow-container {
