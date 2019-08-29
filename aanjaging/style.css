@@ -1389,10 +1389,14 @@ div.ad_wrapper{
 }
 
 article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-large.branded_in-article,
-article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large.branded_in-article,
 article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-large.branded_in-article {
     width: 560px;
 } 
+
+article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large.branded_in-article {
+    width: 100%;
+    margin-bottom: 30px;
+}
 
 /* End of In-Article */
 
