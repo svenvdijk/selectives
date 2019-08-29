@@ -1265,10 +1265,7 @@ div.native-carousel__wrapper article { /* Articles */
         width: 280px;
         top: -22px;
     }
-
-
 }
-
 
 /*******************************************************************************************************************************
 ********************************************************************************************************************************
@@ -1376,13 +1373,13 @@ article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-large {  /*
 
 /* In-Article  */
 
-div.ad_wrapper{
-    background: #eaeaea;
-    padding: 20px 15px;
+div.ad_wrapper {
+    width: 630px;
+    padding: 20px 20px;
     box-sizing: border-box;
-    margin: 40px 0;
+    margin: 40px 0 40px -20px;
 } div.ad_wrapper.volkskrant_ad_wrapper {
-    background: #eaeaea;
+    background: #f1f1f1;
 } div.ad_wrapper.parool_ad_wrapper,
   div.ad_wrapper.trouw_ad_wrapper {
     background: #f1f1f1;
@@ -1390,7 +1387,7 @@ div.ad_wrapper{
 
 article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-large.branded_in-article,
 article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-large.branded_in-article {
-    width: 560px;
+    width: 590px;
 } 
 
 article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large.branded_in-article {
@@ -1413,9 +1410,9 @@ article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large.bran
         width: 630px;
     }
 
-    div.a_b_wrapper .branded-a_b {
+    /* div.a_b_wrapper .branded-a_b {
         padding: 17px 0;
-    }
+    } */
 
     div.a_b_wrapper .branded-a_b a{
         text-decoration: none;
@@ -1446,6 +1443,10 @@ article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large.bran
         letter-spacing: -0.3px;
     }
 
+    div.a_b_wrapper:hover .branded-a_b .content-wrapper .title {
+        text-decoration: underline;
+    }
+
     div.a_b_wrapper .branded-a_b .content-wrapper .paragraph {
         font-weight: 300;
         line-height: 1.5;
@@ -1462,11 +1463,15 @@ article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large.bran
         letter-spacing: -0.3px;
     }
 
+    div.a_b_wrapper:hover .branded-a_b.branded-a_b--with-image .content-wrapper .title {
+        text-decoration: underline;
+    }
+
     div.a_b_wrapper .branded-a_b.branded-a_b--with-image {
         padding: 0;
     }
 
-    div.a_b_wrapper .branded-a_b .content-wrapper .paragraph{
+    div.a_b_wrapper .branded-a_b .content-wrapper .paragraph {
         margin-top: 10px;
     }
 
