@@ -1398,6 +1398,141 @@ article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large.bran
     margin-bottom: 30px;
 }
 
+    /* AB testing banner
+    * @author: Mitchell Kolster - Total Design
+    * mitchell@totaldesign.com
+    */
+
+    div.a_b_wrapper{
+        background: #f1f1f1;
+        padding: 20px 20px;
+        box-sizing: border-box;
+        margin: 40px 0 40px -20px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        width: 630px;
+    }
+
+    div.a_b_wrapper .branded-a_b {
+        padding: 17px 0;
+    }
+
+    div.a_b_wrapper .branded-a_b a{
+        text-decoration: none;
+    }
+
+    div.a_b_wrapper .branded-a_b .content-wrapper {
+        font-family: 'Roboto',Arial,Helvetica Neue,Helvetica,"sans-serif";
+    }
+
+    div.a_b_wrapper .branded-a_b .image-wrapper {
+        height: 280px;
+    }
+
+    div.a_b_wrapper .branded-a_b .image-wrapper source,
+    div.a_b_wrapper .branded-a_b .image-wrapper img {
+        width: 100%;
+        height: auto;
+    }
+
+    div.a_b_wrapper .branded-a_b .content-wrapper sub {
+        color: black;
+    }
+
+    div.a_b_wrapper .branded-a_b .content-wrapper .title {
+        font-size: 42px;
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -0.3px;
+    }
+
+    div.a_b_wrapper .branded-a_b .content-wrapper .paragraph {
+        font-weight: 300;
+        line-height: 1.5;
+        letter-spacing: -0.3px;
+        color: black;
+        margin-top: 7px;
+        margin-bottom: 0;
+    }
+
+    /* With image */
+    div.a_b_wrapper .branded-a_b.branded-a_b--with-image .content-wrapper .title {
+        font-size: 32px;
+        line-height: 1.1;
+        letter-spacing: -0.3px;
+    }
+
+    div.a_b_wrapper .branded-a_b.branded-a_b--with-image {
+        padding: 0;
+    }
+
+    div.a_b_wrapper .branded-a_b .content-wrapper .paragraph{
+        margin-top: 10px;
+    }
+
+    div.a_b_wrapper .wrapper {
+        position: relative;
+    }
+
+    div.a_b_wrapper .branded-a_b--with-image .wrapper .image-wrapper {
+        width: calc(50% - 10px);
+        float: right;
+    }
+
+    div.a_b_wrapper .branded-a_b--with-image .wrapper .content-wrapper {
+        width: calc(50% - 10px);
+        float: left;
+    }
+
+    div.a_b_wrapper .branded-a_b--pos-reverse.branded-a_b--with-image .wrapper .image-wrapper {
+        float: left;
+    }
+
+    div.a_b_wrapper .branded-a_b--pos-reverse.branded-a_b--with-image .wrapper .content-wrapper {
+        float: right;
+    }
+
+    @supports (display: flex) {
+        div.a_b_wrapper .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        div.a_b_wrapper .branded-a_b--pos-reverse.branded-a_b--with-image .wrapper {
+            flex-direction: row-reverse;
+        }
+
+        div.a_b_wrapper .branded-a_b--with-image .wrapper .image-wrapper {
+            order: 2;
+            width: calc(50% - 10px);
+            margin-left: 10px;
+            float: none;
+        }
+
+        div.a_b_wrapper .branded-a_b--with-image .wrapper .content-wrapper {
+            order: 1;
+            flex-grow: 1;
+            width: calc(50% - 10px);
+            margin-right: 10px;
+            float: none;
+        }
+
+        div.a_b_wrapper .branded-a_b--pos-reverse.branded-a_b--with-image .wrapper .image-wrapper {
+            margin-left: 0;
+            margin-right: 10px;
+            float: none;
+        }
+
+        div.a_b_wrapper .branded-a_b--pos-reverse.branded-a_b--with-image .wrapper .content-wrapper {
+            margin-right: 0;
+            margin-left: 10px;
+            float: none;
+        }
+    }
+
+    /* End with image */
+    /* End AB testing banner */
+
 /* End of In-Article */
 
 /************************************************
