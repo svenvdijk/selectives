@@ -1360,13 +1360,13 @@ article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-rectan
 /*
     Aankeiler 600x280
 */
-
 article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-large {  /* Trouw*/
     width: 610px;
     height: 295px;
-} article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large, /* Parool */
-  article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-large, /* Volkskrant */
-  article.branded-aankeiler.branded-aankeiler--humo.branded-aankeiler-large { /* Humo */
+} 
+article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large, /* Parool */
+article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-large, /* Volkskrant */
+article.branded-aankeiler.branded-aankeiler--humo.branded-aankeiler-large { /* Humo */
     width: 600px;
     height: 280px;
 } 
@@ -1414,7 +1414,7 @@ article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large.bran
         padding: 17px 0;
     } */
 
-    div.a_b_wrapper .branded-a_b a{
+    div.a_b_wrapper .branded-a_b a {
         text-decoration: none;
     }
 
@@ -1430,6 +1430,10 @@ article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large.bran
     div.a_b_wrapper .branded-a_b .image-wrapper img {
         width: 100%;
         height: auto;
+    }
+
+    div.a_b_wrapper .branded-a_b .image-wrapper picture {
+        background-size: cover;
     }
 
     div.a_b_wrapper .branded-a_b .content-wrapper sub {
