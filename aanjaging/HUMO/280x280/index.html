@@ -9,17 +9,17 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <article class="branded-aankeiler branded-aankeiler--humo branded-aankeiler-square half">
+    <article class="branded-aankeiler branded-aankeiler--humo branded-aankeiler-square">
         <a href="{{link}}">
             <div class="wrapper">
                 <div class="image-wrapper">
-                    <picture class="half">
-                        <source srcset="../../../images/560x560.jpg" data-size="full">
-                        <source srcset="../../../images/560x280.jpg" data-size="half">
+                    <picture>
+                        <source srcset="{{getThumbHref width=600 height=600}}" data-size="full">
+                        <source srcset="{{getThumbHref width=600 height=300}}" data-size="half">
                     </picture>
                 </div>
                 <div class="content-wrapper gradient bottom">
-                    <sub class="label label--humo dark"><span>{{custom.label}} </span>{{sponsor.name}}</sub>
+                    <sub class="label label--humo dark"><span>{{custom.labelSelectives}} </span>{{sponsor.name}}</sub>
                     <header class="title">{{title}}</header>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-<section class="native_carousel__container native_home-carrousel native_carousel__parool">
+<section class="native_carousel__container native_home-carrousel native_carousel__humo">
     <header class="carousel-header">
         <div class="arrow-container" aria-hidden="false">
             <input id="slider_left" type="radio" name="slider" checked class="btn_left btn_slide hidden" aria-label="Previous">
@@ -15,11 +15,11 @@
                 </label>
             </div>
         </div>
-        <h1 class="native-carousel__title">Partnerbijdrage</h1>
+        <h1 class="native-carousel__title">van onze adverteerders</h1>
     </header>
     <div class="native-carousel__wrapper responsive">
         {{#each creatives}}
-        <article class="branded-aankeiler branded-aankeiler--parool branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="" data-id="{{nameInCollection}}">
+        <article class="branded-aankeiler branded-aankeiler--humo branded-aankeiler-square hmp-carousel native-carousel-entry {{nameInCollection}}" data-col="" data-id="{{nameInCollection}}">
             <div class="line1"></div>
             <div class="line2"></div>
             <a href="{{link}}">
@@ -38,7 +38,7 @@
                         </picture>
                     </div>
                     <div class="content-wrapper gradient">
-                        <sub class="label label--parool dark"><span>{{custom.label}}</span> {{sponsor.name}}</sub>
+                        <sub class="label label--humo dark"><span>{{custom.label}}</span> {{sponsor.name}}</sub>
                         <header class="title">{{title}}</header>
                     </div>
                 </div>
