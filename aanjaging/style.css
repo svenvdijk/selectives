@@ -26,17 +26,17 @@
         font-family: 'Roboto',Arial,Helvetica Neue,Helvetica,"sans-serif";
         letter-spacing: -0.3px;
     }
+
     .native_carousel__container.native_carousel__parool  header.carousel-header { /* Parool */
-        border-bottom: 6px solid black;
+        border-bottom: 2px solid #000;
         margin: 0 20px;
         position: relative;
     }
 
     .native_carousel__container.native_carousel__parool header.carousel-header h1 { /* Parool */
-        font-size: 29px;
+        font-size: 30px;
         line-height: 1;
-        font-weight: 400;
-        letter-spacing: 0.3px;
+        font-weight: 500;
         margin: 0 0 10px;
         color: #eebe01;
     }
@@ -122,8 +122,6 @@
     }
 
     /* Header HUMO */
-
-
     .native_carousel__container.native_carousel__humo header.carousel-header {
         position: relative;
         margin: 0 20px 10px;
@@ -166,9 +164,11 @@
         position: relative;
         z-index: 2;
     }
-
     /* End of Header HUMO */
 
+    /* 
+    Arrow button
+    */
     input.btn_slide {
         appearance: none;
         -webkit-appearance: none;
@@ -208,10 +208,9 @@
         width: 24px;
     }
 
-/* 
-    .arrow-next {
-        float: right;
-    } */
+    /* 
+    End of Arrow button
+    */
 
     .native_carousel__container.native_carousel__volkskrant header div.arrow-container,
     .native_carousel__container.native_carousel__parool header div.arrow-container,
@@ -321,7 +320,8 @@ div.native-carousel__wrapper article { /* Articles */
         font-family: 'Roboto',Arial,Helvetica Neue,Helvetica,"sans-serif";
         padding: 5px 35px 5px 20px;
         position: relative;
-    } .native-read-more.native-read-more--parool .native-read-more__wrapper a::after { /* Parool */
+    } 
+    .native-read-more.native-read-more--parool .native-read-more__wrapper a::after { /* Parool */
         content: "";
         border-right: 1px solid #fff;
         border-bottom: 1px solid #fff;
@@ -345,7 +345,8 @@ div.native-carousel__wrapper article { /* Articles */
         color: #727272;
         text-transform: uppercase;
         text-decoration: none;
-    }    .native-read-more.native-read-more--volkskrant:hover .native-read-more__wrapper a { /* Volkskrant */
+    }    
+    .native-read-more.native-read-more--volkskrant:hover .native-read-more__wrapper a { /* Volkskrant */
             color: #111;
             cursor: pointer;
     }
@@ -363,7 +364,8 @@ div.native-carousel__wrapper article { /* Articles */
         color: #727272;
         text-transform: uppercase;
         text-decoration: none;
-    }   .native-read-more.native-read-more--trouw:hover .native-read-more__wrapper a { /* Trouw */
+    }   
+    .native-read-more.native-read-more--trouw:hover .native-read-more__wrapper a { /* Trouw */
             color: #111;
             cursor: pointer;
     }
@@ -372,21 +374,24 @@ div.native-carousel__wrapper article { /* Articles */
 */
 
 @media screen and (min-width: 640px) {
-
-    article.branded-aankeiler.hmp-carousel.branded-aankeiler-square.native-carousel-entry { /* remove padding from article */
-        padding: 0;
-    }
+    /* 
+    Arrow Buttons
+    */
 
     .arrow svg {
         height: 24px;
         width: 24px;
     }
-    /* .native_carousel__container.native_carousel__parool header div,
-    .native_carousel__container.native_carousel__trouw header div {
-        top: 20px;
-    } */
+
     .arrow:first-of-type {
         margin-right: 20px;
+    }
+    /* 
+    End of Arrow Buttons
+    */
+
+    article.branded-aankeiler.hmp-carousel.branded-aankeiler-square.native-carousel-entry { /* remove padding from article */
+        padding: 0;
     }
 
     section.native_carousel__container.native_carousel__trouw {
@@ -710,14 +715,8 @@ div.native-carousel__wrapper article { /* Articles */
     }
 
     /* End of Homepage Carousel */
-
-
 }
 
-@media screen and (min-width: 640px) and (max-width: 959px) { /* Two Columns */
-
-    
-}
 
 @media screen and (min-width: 960px) {
         /* Volkskrant Homepage Carousel */
@@ -805,7 +804,7 @@ div.native-carousel__wrapper article { /* Articles */
     /* End of humo Homepage Carousel */
 
     /*
-                Homepage Carousel Trouw
+        Homepage Carousel Trouw
     */
     section.native_carousel__container.native_carousel__trouw  {
         width: 941px;
@@ -826,14 +825,14 @@ div.native-carousel__wrapper article { /* Articles */
     .native_carousel__container.native_carousel__trouw header div.arrow-container {
         top: 5px;
     }
-    /*
-                End of Homepage Carousel Trouw
-    */
 
     .branded-aankeiler:first-child.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-column-size='3'],
     .branded-aankeiler:first-child.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-column-size='4'] {
         width: 925px;
     }
+    /*
+        End of Homepage Carousel Trouw
+    */
 
     /* Grid Position*/
     article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="0"] { /* First Tile */
@@ -903,16 +902,11 @@ div.native-carousel__wrapper article { /* Articles */
         top: 2520px;
         left: 0;
     }
-
     /* End of Grid Position*/
 
     section.native_carousel__container  {
         width: 960px;
     }   
-    /* Trouw */
-
-
-    /* End of Trouw */
 
     section.native_carousel__container div.native-carousel__wrapper { /* Height of carrousel (Sectie pagina only) */
         height: 940px;
@@ -922,7 +916,7 @@ div.native-carousel__wrapper article { /* Articles */
         width: calc(100% - 40px);
     }
 
-        /*
+    /*
     Lines
     */
     .branded-aankeiler.branded-aankeiler-square.native-carousel-entry.col3 .line2::before,
@@ -1331,6 +1325,15 @@ article.branded-aankeiler.branded-aankeiler-square.full {
     padding: 0px;
 }
 
+/* 280x280 HUMO */
+
+@media screen and (max-width: 639px) {
+    .branded-aankeiler.branded-aankeiler--humo.branded-aankeiler-square.half{
+        padding: 15px 0;
+    }
+}
+
+
 /* Parool Homepage Carousel*/
 .branded-aankeiler.branded-aankeiler--parool.hmp-carousel.branded-aankeiler-square.half { 
     width: calc(100vw - 20px); 
@@ -1623,24 +1626,41 @@ Label
         margin: 5px 0 0;
     }
 
+    @media screen and (max-width: 639px) {
+        .label--humo {
+            margin: 15px 0 0;
+        }
+    }
+
     .label span {
         font-weight: bold;
         font-size: inherit;
-    }   .label.label--parool span,
-        .label.label--volkskrant span,
-        .label.label--humo span {
-            color: #eebe01;
-        }   .label.label--trouw span {
-                color: #973d98;
-            }
+    }   
+    .label.label--parool span,
+    .label.label--volkskrant span,
+    .label.label--humo span {
+        color: #eebe01;
+    }   
+    .label.label--trouw span {
+        color: #973d98;
+    }
 
-            .branded-aankeiler--trouw.full a .wrapper .content-wrapper .label--trouw {
-                background: #fff;
-                display: inline-block;
-                color: #000;
-                padding: 3px 5px;
-                font-size: 12px;
-            }
+    .branded-aankeiler--trouw.full a .wrapper .content-wrapper .label--trouw {
+        background: #fff;
+        display: inline-block;
+        color: #000;
+        padding: 3px 5px;
+        font-size: 12px;
+    }
+    /* ESCAPED HUMO STYLING LABEL */
+    /* .branded-aankeiler--humo a .wrapper .content-wrapper .label--humo {
+        text-transform: uppercase;
+        font-size: 17px;
+    }
+    .branded-aankeiler--humo a .wrapper .content-wrapper .label--humo span {
+        font-size: 12px;
+    } */
+    /* END of ESCAPED HUMO STYLING LABEL */
 
 
     article.branded-aankeiler.half a div.content-wrapper .label {
@@ -1670,6 +1690,13 @@ Label
 .content-wrapper {
     padding: 0 0 10px;
     overflow: hidden;
+}
+
+@media screen and (max-width: 639px) {
+    .branded-aankeiler.branded-aankeiler--humo.half a .wrapper .content-wrapper {
+        border-bottom: 1px solid #000;
+        padding: 0 15px 10px;
+    }
 }
 
 /*

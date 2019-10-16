@@ -30,7 +30,14 @@ function(renderContext) {
                 $(this).css({ 'text-align': textPosition });
                 $(this).addClass(contentPosition);
                 break; //Quit loop
+            } 
+            // HUMO ONLY
+            if(articleClassList[i] == 'half') { 
+                $(this).css({ 'text-align': textPosition });
+                break; //Quit loop
             }
+            // END HUMO ONLY
+            
         }    
     }
     $('.content-wrapper', renderContext.$template).textAlign();

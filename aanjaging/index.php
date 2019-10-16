@@ -23,6 +23,48 @@
     <title>Directory Summary</title>
 </head>
 <body>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .directory {
+            padding: 20px;
+            display: inline-block;
+        }
+        .container svg,
+        .container img {
+            display: block;
+        } .container svg {
+            margin: 0 auto;
+        } .container img {
+            margin: 0 auto 6px;
+        }
+
+        #map_open {
+
+        }
+
+        #map_closed {
+            display: none;
+        }
+
+        a.directory:hover div.container #map_open {
+            display: none;
+        }
+        a.directory:hover div.container #map_closed {
+            display: block;
+        }
+
+        sub {
+            text-align: center;
+        }
+
+        .dropdown {
+            position: absolute;
+        }
+    </style>
+
     <div>
         <input value="Previous Page" type="button" onclick="goToPreviousURL();"></input>
     </div>
@@ -87,7 +129,15 @@
     ?>
 
 
-    <script src="./index.js"></script>
+    <script>
+        function goToPreviousURL() {
+            window.history.back();
+        }
+
+        $('.dir_folder').click(function(event){
+            $(this).find('.dropdown').toggle('hidden');
+        })
+    </script>
     
 </body>
 </html>
