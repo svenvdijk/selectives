@@ -1378,7 +1378,7 @@ article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-rectan
 }
 
 /*
-    Aankeiler 600x280
+    Aankeiler 352x280
 */
 article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-large {  /* Trouw*/
     width: 610px;
@@ -1605,6 +1605,11 @@ article.branded-aankeiler.branded-aankeiler--trouw.interview {
         display: block;
     }
 
+    article.branded-aankeiler.branded-aankeiler-square.interview .image-wrapper {
+        width: 35%;
+        background: none;
+    }
+
     /* Volkskrant */
     article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-square.interview .content-wrapper {
         padding: 4px 0 10px 10px;
@@ -1616,6 +1621,47 @@ article.branded-aankeiler.branded-aankeiler--trouw.interview {
     article.branded-aankeiler.branded-aankeiler--humo.branded-aankeiler-square.interview .content-wrapper,
     article.branded-aankeiler.branded-aankeiler--demorgen.branded-aankeiler-square.interview .content-wrapper {
         padding: 10px 0 10px 10px;
+    }
+
+    @media screen and (min-width: 640px) {
+        article.branded-aankeiler.branded-aankeiler-square.interview {
+            margin: 0;
+        }
+    
+        article.branded-aankeiler.branded-aankeiler-square.interview > a {
+            display: grid;
+            grid-template-rows: 1fr auto;
+            height: 100%;
+        }
+    
+        article.branded-aankeiler.branded-aankeiler-square.interview .wrapper {
+            flex-direction: column;
+        }
+    
+        /* Content Wrapper */
+            /* All titles */
+            article.branded-aankeiler.branded-aankeiler-square.interview .content-wrapper {
+                width: 100%;
+            }
+            /* Volkskrant */
+            article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-square.interview .content-wrapper {
+                padding: 4px 10px 0;
+            }
+    
+            /* Parool, Trouw, Humo, deMorgen */
+            article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-square.interview .content-wrapper,
+            article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.interview .content-wrapper,
+            article.branded-aankeiler.branded-aankeiler--humo.branded-aankeiler-square.interview .content-wrapper,
+            article.branded-aankeiler.branded-aankeiler--demorgen.branded-aankeiler-square.interview .content-wrapper {
+                padding: 6px 10px 0 10px;
+            }
+        /* End of Content Wrapper */
+        
+        article.branded-aankeiler.branded-aankeiler-square.interview .image-wrapper {
+            width: 100%;
+            flex: 1 1 auto;
+            order: 1;
+        }
     }
 /* End of 280x280 */
 
@@ -1663,55 +1709,29 @@ article.branded-aankeiler.branded-aankeiler--trouw.interview {
 /* End of 300x600 */
 
 /* 352x280 */
-
-/* End of 352x280 */
-
-
-article.branded-aankeiler.branded-aankeiler-square.interview .image-wrapper {
-    width: 35%;
-    background: none;
-}
-
-@media screen and (min-width: 640px) {
-    article.branded-aankeiler.branded-aankeiler-square.interview {
-        margin: 0;
-    }
-
-    article.branded-aankeiler.branded-aankeiler-square.interview > a {
-        display: grid;
-        grid-template-rows: 1fr auto;
+    article.branded-aankeiler.branded-aankeiler-large.interview .wrapper {
+        display: flex;
+        flex-direction: row-reverse;
         height: 100%;
     }
 
-    article.branded-aankeiler.branded-aankeiler-square.interview .wrapper {
-        flex-direction: column;
+    article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-large.interview .content-wrapper {
+        padding: 14px 0 20px 20px;
+        height: 100%;
     }
 
-    /* Content Wrapper */
-        /* All titles */
-        article.branded-aankeiler.branded-aankeiler-square.interview .content-wrapper {
-            width: 100%;
-        }
-        /* Volkskrant */
-        article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-square.interview .content-wrapper {
-            padding: 4px 10px 0;
-        }
-
-        /* Parool, Trouw, Humo, deMorgen */
-        article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-square.interview .content-wrapper,
-        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.interview .content-wrapper,
-        article.branded-aankeiler.branded-aankeiler--humo.branded-aankeiler-square.interview .content-wrapper,
-        article.branded-aankeiler.branded-aankeiler--demorgen.branded-aankeiler-square.interview .content-wrapper {
-            padding: 6px 10px 0 10px;
-        }
-    /* End of Content Wrapper */
-    
-    article.branded-aankeiler.branded-aankeiler-square.interview .image-wrapper {
-        width: 100%;
-        flex: 1 1 auto;
-        order: 1;
+    article.branded-aankeiler.branded-aankeiler-large.interview .content-wrapper {  
+        width:  65%;
+        z-index: 1;
+        display: block;
     }
-}
+
+    article.branded-aankeiler.branded-aankeiler-large.interview .image-wrapper {
+        width: 35%;
+        background: none;
+    }
+
+/* End of 352x280 */
 
 /* End of Selectives Interview Creative
 *************************************************/
@@ -1755,6 +1775,10 @@ article.branded-aankeiler.branded-aankeiler-square.interview .image-wrapper {
 
     .branded-aankeiler-rectangle .image-wrapper .interview { /* 300x600 */
         background-size: cover;
+    }
+
+    .branded-aankeiler-large .image-wrapper .interview { /* 352x280 */
+        background-size: contain;
     }
 
     .image-wrapper .interview {
@@ -1910,7 +1934,7 @@ Label
         padding: 20% 10px 10px;
     }
 
-    .branded-aankeiler.branded-aankeiler-large.full a .wrapper .content-wrapper,/* 600x280 */
+    .branded-aankeiler.branded-aankeiler-large.full a .wrapper .content-wrapper,/* 352x280 */
     .branded-aankeiler.branded-aankeiler-rectangle.full a .wrapper .content-wrapper { /* 300x600 Full Image */
         padding: 20% 20px 20px;
     }
@@ -1990,7 +2014,7 @@ Label
         line-height: 7.46667vw;
     }
 
-    .branded-aankeiler.branded-aankeiler-large a .wrapper .content-wrapper header { /* 600x280 */
+    .branded-aankeiler.branded-aankeiler-large a .wrapper .content-wrapper header.title { /* 352x280 */
         font-size: 28px;
         line-height: 1.2;
     }
@@ -2046,7 +2070,8 @@ article.branded-aankeiler.full a div .content-wrapper.top.gradient {
         font-size: 18px; 
     }
 
-    article.branded-aankeiler.branded-aankeiler-large.full a .wrapper .content-wrapper header {
+    article.branded-aankeiler.branded-aankeiler-large.full a .wrapper .content-wrapper header.title,
+    article.branded-aankeiler.branded-aankeiler-large.interview a .wrapper .content-wrapper header.title { /* 352x280 */
         font-size: 28px; 
         line-height: 29px;
     }
