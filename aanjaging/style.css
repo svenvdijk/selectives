@@ -1391,7 +1391,11 @@ article.branded-aankeiler.branded-aankeiler--humo.branded-aankeiler-large { /* H
     height: 280px;
 } 
 
-/* In-Article  */
+/***************************************
+*    In-Article 
+*    @Author Sven van Dijk 
+*    Email: s.vandijk@dpgmedia.nl 
+*/
 
 div.ad_wrapper {
     width: 630px;
@@ -1417,7 +1421,7 @@ article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large.bran
     margin-bottom: 30px;
 }
 
-    /* AB testing banner
+    /* AB testing banner - No Text, Left Image, Right Image
     * @author: Mitchell Kolster - Total Design
     * mitchell@totaldesign.com
     */
@@ -1562,52 +1566,105 @@ article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large.bran
 
 /* End of In-Article */
 
-/* Interview creative */
+/************************************************
+*    Selectives Interview Creative
+*    Author: Sven van Dijk
+*    Email: s.vandijk@dpgmedia.nl
+*/
 article.branded-aankeiler.branded-aankeiler-square.interview {
     margin: 15px;
 }
 
-article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-square.interview {
+article.branded-aankeiler.branded-aankeiler--volkskrant.interview {
     background: #FFFAE6;
     border-top: 8px solid #eebe01;
     padding: 0;
 }
 
-article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-square.interview,
-article.branded-aankeiler.branded-aankeiler--demorgen.branded-aankeiler-square.interview,
-article.branded-aankeiler.branded-aankeiler--humo.branded-aankeiler-square.interview {
+article.branded-aankeiler.branded-aankeiler--parool.interview,
+article.branded-aankeiler.branded-aankeiler--demorgen.interview,
+article.branded-aankeiler.branded-aankeiler--humo.interview {
     background: #FFFAE6;
     padding: 0;
 }
 
-article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.interview {
+article.branded-aankeiler.branded-aankeiler--trouw.interview {
     background: #F0E2F0;
     padding: 0;
 }
 
-article.branded-aankeiler.branded-aankeiler-square.interview .wrapper {
-    display: flex;
-    flex-direction: row-reverse;
-}
+/* 280x280 */
+    article.branded-aankeiler.branded-aankeiler-square.interview .wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    /* All Titles */
+    article.branded-aankeiler.branded-aankeiler-square.interview .content-wrapper {  
+        width:  65%;
+        z-index: 1;
+        display: block;
+    }
 
-/* Content Wrapper */
-/* All Titles */
-article.branded-aankeiler.branded-aankeiler-square.interview .content-wrapper {  
-    width:  65%;
-    z-index: 1;
-    display: block;
-}
+    /* Volkskrant */
+    article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-square.interview .content-wrapper {
+        padding: 4px 0 10px 10px;
+    }
 
-article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-square.interview .content-wrapper {
-    padding: 4px 0 10px 10px;
-}
+    /* Parool, Trouw, Humo, deMorgen */
+    article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-square.interview .content-wrapper,
+    article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.interview .content-wrapper,
+    article.branded-aankeiler.branded-aankeiler--humo.branded-aankeiler-square.interview .content-wrapper,
+    article.branded-aankeiler.branded-aankeiler--demorgen.branded-aankeiler-square.interview .content-wrapper {
+        padding: 10px 0 10px 10px;
+    }
+/* End of 280x280 */
 
-article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-square.interview .content-wrapper,
-article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.interview .content-wrapper,
-article.branded-aankeiler.branded-aankeiler--humo.branded-aankeiler-square.interview .content-wrapper,
-article.branded-aankeiler.branded-aankeiler--demorgen.branded-aankeiler-square.interview .content-wrapper {
-    padding: 10px 0 10px 10px;
-}
+
+/* 300x600 */
+    article.branded-aankeiler.branded-aankeiler-rectangle.interview .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    article.branded-aankeiler.branded-aankeiler-rectangle.interview > a {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        height: 100%;
+    }
+
+    article.branded-aankeiler.branded-aankeiler-rectangle.interview .content-wrapper {  
+        width:  100%;
+        z-index: 1;
+        display: block;
+    }
+
+    /* Volkskrant */
+    article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-rectangle.interview .content-wrapper {
+        padding: 4px 10px 10px;
+    }
+
+    /* Parool, Trouw, Humo, deMorgen */
+    article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-rectangle.interview .content-wrapper,
+    article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-rectangle.interview .content-wrapper,
+    article.branded-aankeiler.branded-aankeiler--humo.branded-aankeiler-rectangle.interview .content-wrapper,
+    article.branded-aankeiler.branded-aankeiler--demorgen.branded-aankeiler-rectangle.interview .content-wrapper {
+        padding: 10px;
+    }
+
+    article.branded-aankeiler.branded-aankeiler-rectangle.interview .content-wrapper header.title {
+        font-size: 22.8px;
+    }
+
+    article.branded-aankeiler.branded-aankeiler-rectangle.interview .image-wrapper {
+        width: 100%;
+        flex: 1 1 auto;
+        order: 1;
+    }
+/* End of 300x600 */
+
+/* 352x280 */
+
+/* End of 352x280 */
 
 
 article.branded-aankeiler.branded-aankeiler-square.interview .image-wrapper {
@@ -1634,7 +1691,6 @@ article.branded-aankeiler.branded-aankeiler-square.interview .image-wrapper {
         /* All titles */
         article.branded-aankeiler.branded-aankeiler-square.interview .content-wrapper {
             width: 100%;
-
         }
         /* Volkskrant */
         article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-square.interview .content-wrapper {
@@ -1650,13 +1706,15 @@ article.branded-aankeiler.branded-aankeiler-square.interview .image-wrapper {
         }
     /* End of Content Wrapper */
     
-
     article.branded-aankeiler.branded-aankeiler-square.interview .image-wrapper {
         width: 100%;
         flex: 1 1 auto;
         order: 1;
     }
 }
+
+/* End of Selectives Interview Creative
+*************************************************/
 
 /************************************************
     Image
@@ -1677,7 +1735,6 @@ article.branded-aankeiler.branded-aankeiler-square.interview .image-wrapper {
     .image-wrapper {
         width: 100%;
         height: inherit;
-        background: gray;
     }
 
     .image-wrapper .half {
@@ -1692,10 +1749,17 @@ article.branded-aankeiler.branded-aankeiler-square.interview .image-wrapper {
         height: inherit;
     }
 
+    .branded-aankeiler-square .image-wrapper .interview { /* 280x280 */
+        background-size: contain;
+    }
+
+    .branded-aankeiler-rectangle .image-wrapper .interview { /* 300x600 */
+        background-size: cover;
+    }
+
     .image-wrapper .interview {
         display: block;
         height: 100%;
-        background-size: contain;
         background-repeat: no-repeat;
         background-position: bottom;
     }
@@ -1731,6 +1795,14 @@ Label
         margin: 5px 0 0;
     }
 
+    /* Interview Creative for Parool and Humo
+    * Label Parool 
+    */
+    article.branded-aankeiler.branded-aankeiler-square.interview .label.label--parool,
+    article.branded-aankeiler.branded-aankeiler-square.interview .label.label--humo { 
+        margin: 0;
+    }
+
     @media screen and (max-width: 639px) {
         .label--humo {
             margin: 15px 0 0;
@@ -1758,12 +1830,16 @@ Label
         font-size: 12px;
     }
     /* ESCAPED HUMO STYLING LABEL */
-    /* .branded-aankeiler--humo a .wrapper .content-wrapper .label--humo {
+    /* .branded-aankeiler--humo a .wrapper .content-wrapper .label.label--humo {
         text-transform: uppercase;
         font-size: 17px;
+        font-weight: 700;
+        color: #eebe01;
     }
     .branded-aankeiler--humo a .wrapper .content-wrapper .label--humo span {
         font-size: 12px;
+        font-weight: 400;
+        color: #000;
     } */
     /* END of ESCAPED HUMO STYLING LABEL */
 
