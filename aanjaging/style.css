@@ -219,14 +219,17 @@
     .native_carousel__container.native_carousel__demorgen header div.arrow-container {
         position: absolute;
         z-index: 2;
-    } .native_carousel__container.native_carousel__volkskrant header div.arrow-container {
+    } 
+    .native_carousel__container.native_carousel__volkskrant header div.arrow-container {
         right: 0;
         bottom: 5px;
-    }.native_carousel__container.native_carousel__parool header div.arrow-container,
-      .native_carousel__container.native_carousel__humo header div.arrow-container {
+    }
+    .native_carousel__container.native_carousel__parool header div.arrow-container,
+    .native_carousel__container.native_carousel__humo header div.arrow-container {
         right: 0;
         bottom: 14px;
-    } .native_carousel__container.native_carousel__trouw header div.arrow-container {
+    } 
+    .native_carousel__container.native_carousel__trouw header div.arrow-container {
         right: 0;
         bottom: 0;
     }
@@ -1278,8 +1281,9 @@ div.native-carousel__wrapper article { /* Articles */
 /*******************************************************************************************************************************
 ********************************************************************************************************************************
     Teaser Styling
-
+    The Styling for the look&feel of the creative. 
 */
+
 .hide {
     display: none;
 }
@@ -1332,7 +1336,6 @@ article.branded-aankeiler.branded-aankeiler-square.full {
         padding: 15px 0;
     }
 }
-
 
 /* Parool Homepage Carousel*/
 .branded-aankeiler.branded-aankeiler--parool.hmp-carousel.branded-aankeiler-square.half { 
@@ -1395,10 +1398,12 @@ div.ad_wrapper {
     padding: 20px 20px;
     box-sizing: border-box;
     margin: 40px 0 40px -20px;
-} div.ad_wrapper.volkskrant_ad_wrapper {
+} 
+div.ad_wrapper.volkskrant_ad_wrapper {
     background: #f1f1f1;
-} div.ad_wrapper.parool_ad_wrapper,
-  div.ad_wrapper.trouw_ad_wrapper {
+} 
+div.ad_wrapper.parool_ad_wrapper,
+div.ad_wrapper.trouw_ad_wrapper {
     background: #f1f1f1;
 }
 
@@ -1426,10 +1431,6 @@ article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large.bran
         -moz-osx-font-smoothing: grayscale;
         width: 630px;
     }
-
-    /* div.a_b_wrapper .branded-a_b {
-        padding: 17px 0;
-    } */
 
     div.a_b_wrapper .branded-a_b a {
         text-decoration: none;
@@ -1561,6 +1562,102 @@ article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large.bran
 
 /* End of In-Article */
 
+/* Interview creative */
+article.branded-aankeiler.branded-aankeiler-square.interview {
+    margin: 15px;
+}
+
+article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-square.interview {
+    background: #FFFAE6;
+    border-top: 8px solid #eebe01;
+    padding: 0;
+}
+
+article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-square.interview,
+article.branded-aankeiler.branded-aankeiler--demorgen.branded-aankeiler-square.interview,
+article.branded-aankeiler.branded-aankeiler--humo.branded-aankeiler-square.interview {
+    background: #FFFAE6;
+    padding: 0;
+}
+
+article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.interview {
+    background: #F0E2F0;
+    padding: 0;
+}
+
+article.branded-aankeiler.branded-aankeiler-square.interview .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* Content Wrapper */
+/* All Titles */
+article.branded-aankeiler.branded-aankeiler-square.interview .content-wrapper {  
+    width:  65%;
+    z-index: 1;
+    display: block;
+}
+
+article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-square.interview .content-wrapper {
+    padding: 4px 0 10px 10px;
+}
+
+article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-square.interview .content-wrapper,
+article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.interview .content-wrapper,
+article.branded-aankeiler.branded-aankeiler--humo.branded-aankeiler-square.interview .content-wrapper,
+article.branded-aankeiler.branded-aankeiler--demorgen.branded-aankeiler-square.interview .content-wrapper {
+    padding: 10px 0 10px 10px;
+}
+
+
+article.branded-aankeiler.branded-aankeiler-square.interview .image-wrapper {
+    width: 35%;
+    background: none;
+}
+
+@media screen and (min-width: 640px) {
+    article.branded-aankeiler.branded-aankeiler-square.interview {
+        margin: 0;
+    }
+
+    article.branded-aankeiler.branded-aankeiler-square.interview > a {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        height: 100%;
+    }
+
+    article.branded-aankeiler.branded-aankeiler-square.interview .wrapper {
+        flex-direction: column;
+    }
+
+    /* Content Wrapper */
+        /* All titles */
+        article.branded-aankeiler.branded-aankeiler-square.interview .content-wrapper {
+            width: 100%;
+
+        }
+        /* Volkskrant */
+        article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-square.interview .content-wrapper {
+            padding: 4px 10px 0;
+        }
+
+        /* Parool, Trouw, Humo, deMorgen */
+        article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-square.interview .content-wrapper,
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.interview .content-wrapper,
+        article.branded-aankeiler.branded-aankeiler--humo.branded-aankeiler-square.interview .content-wrapper,
+        article.branded-aankeiler.branded-aankeiler--demorgen.branded-aankeiler-square.interview .content-wrapper {
+            padding: 6px 10px 0 10px;
+        }
+    /* End of Content Wrapper */
+    
+
+    article.branded-aankeiler.branded-aankeiler-square.interview .image-wrapper {
+        width: 100%;
+        flex: 1 1 auto;
+        order: 1;
+    }
+}
+
 /************************************************
     Image
 */
@@ -1577,7 +1674,7 @@ article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large.bran
         height: 100%;
     }
 
-    .image-wrapper{
+    .image-wrapper {
         width: 100%;
         height: inherit;
         background: gray;
@@ -1593,6 +1690,14 @@ article.branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-large.bran
     .image-wrapper .full {
         display: block;
         height: inherit;
+    }
+
+    .image-wrapper .interview {
+        display: block;
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
     }
 
     article.branded-aankeiler.branded-aankeiler-square.hmp-carousel a div.wrapper div.image-wrapper picture {
@@ -1667,6 +1772,10 @@ Label
         color: #000;
     }
 
+    article.branded-aankeiler.interview a div.content-wrapper .label {
+        color: #000;
+    }
+
     article.branded-aankeiler.full a div.content-wrapper .label {
         color: #fff;
     }
@@ -1690,6 +1799,7 @@ Label
 .content-wrapper {
     padding: 0 0 10px;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 639px) {
@@ -1730,7 +1840,7 @@ Label
     }
 
     .branded-aankeiler.full a .wrapper .content-wrapper.center {
-        padding: 20% 10px;
+        padding: 10px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -1769,10 +1879,14 @@ Label
 
     .content-wrapper header {
         font-size: 16px;
-        font-weight: 900;
+        font-weight: 300;
         color: #000;
         line-height: 1.3;
         font-family: inherit;
+    }
+
+    .content-wrapper header b {
+        font-weight: 700;
     }
 
     .branded-aankeiler:hover a .wrapper .content-wrapper header {
@@ -1888,7 +2002,7 @@ article.branded-aankeiler.full a div .content-wrapper.top.gradient {
     ***************************************************************************************************
     ***************************************************************************************************/
 
-    article.branded-aankeiler.branded-aankeiler-square{
+    article.branded-aankeiler.branded-aankeiler-square {
         height: 280px;
         width: 280px;
         padding: 0;
@@ -1901,6 +2015,7 @@ article.branded-aankeiler.full a div .content-wrapper.top.gradient {
         padding: 0;
         position: relative;
     } article.branded-aankeiler.branded-aankeiler-square.full,
+      article.branded-aankeiler.branded-aankeiler-square.interview,
       article:not(.hmp-carousel).branded-aankeiler.branded-aankeiler--parool.branded-aankeiler-square.full
       article.branded-aankeiler.branded-aankeiler-square.hmp-carousel.native-carousel-entry.full  {
         height: 280px;
