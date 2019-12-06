@@ -1,0 +1,855 @@
+/* Adslot Styling */
+#dfp-branded2.ad--section {
+    background: #fff;
+    border: none;
+}
+/* End of Adslot Styling */
+
+/* Text Styling */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap'); /* Google Font Roboto */
+
+.native-carousel__wrapper .branded-aankeiler.branded-aankeiler-square.native-carousel-entry a {
+    font-size: 16px;
+}
+
+.branded-aankeiler a div.wrapper .content-wrapper, /* Normal Teasers 280x280/300x600/352x280 */
+section.native_carousel__container.native_carousel__parool, /* parool */
+section.native_carousel__container.native_carousel__volkskrant, /* volkskrant */
+section.native_carousel__container.native_carousel__trouw, /* trouw */
+section.native_carousel__container.native_carousel__humo, /* HUMO */
+section.native_carousel__container.native_carousel__demorgen { /* de Morgen */
+    font-family: 'Roboto',Arial,Helvetica Neue,Helvetica,"sans-serif";
+    letter-spacing: -0.3px;
+}
+
+/* label styling */
+
+.label {
+    letter-spacing: 0;
+    font-weight: normal;
+    font-size: .8em;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: calc(100% - 10px);
+}
+.label--parool {
+    margin: 15px 0 5px;
+}
+.label--volkskrant,
+.label--trouw,
+.label--demorgen {
+    margin: 5px 0 0;
+}
+
+.label--humo {
+    margin: 15px 0 0;
+}
+
+@media screen and (min-width: 640px) {
+    .label--humo {
+        margin: 5px 0 0;
+    }
+}
+
+.label span {
+    font-weight: bold;
+    font-size: inherit;
+}   
+.label.label--parool span,
+.label.label--volkskrant span,
+.label.label--humo span,
+.label.label--demorgen {
+    color: #eebe01;
+}   
+.label.label--trouw span {
+    color: #973d98;
+}
+
+.branded-aankeiler--trouw.full a .wrapper .content-wrapper .label--trouw {
+    background: #fff;
+    display: inline-block;
+    color: #000;
+    padding: 3px 5px;
+    font-size: 12px;
+}
+
+article.branded-aankeiler.half a div.content-wrapper .label {
+    color: #000;
+}
+
+article.branded-aankeiler.interview a div.content-wrapper .label {
+    color: #000;
+}
+
+article.branded-aankeiler.full a div.content-wrapper .label {
+    color: #fff;
+}
+
+/* ESCAPED HUMO STYLING LABEL */
+/* .branded-aankeiler--humo a .wrapper .content-wrapper .label.label--humo {
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 700;
+    color: #eebe01;
+}
+.branded-aankeiler--humo a .wrapper .content-wrapper .label--humo span {
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+} */
+/* END of ESCAPED HUMO STYLING LABEL */
+
+    /* Styling - Carousel Header */
+
+        /* General */
+        .native_carousel__container.native_carousel__volkskrant header div.arrow-container,
+        .native_carousel__container.native_carousel__parool header div.arrow-container,
+        .native_carousel__container.native_carousel__trouw header div.arrow-container,
+        .native_carousel__container.native_carousel__humo header div.arrow-container,
+        .native_carousel__container.native_carousel__demorgen header div.arrow-container {
+            position: absolute;
+            z-index: 2;
+        } 
+        /* End of General */
+
+        /* Parool */
+        .native_carousel__container.native_carousel__parool  header.carousel-header { 
+            border-bottom: 2px solid #000;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .native_carousel__container.native_carousel__parool header.carousel-header h1 { 
+            font-size: 30px;
+            line-height: 1;
+            font-weight: 500;
+            margin: 0 0 10px;
+            color: #eebe01;
+        }
+
+        .native_carousel__container.native_carousel__parool header sub {
+            color: lightgray;
+            position: absolute;
+            right: 20px;
+            top: 30px;
+            cursor: pointer;
+        }
+
+        .native_carousel__container.native_carousel__parool header div.arrow-container {
+            right: 0;
+            bottom: 14px;
+        } 
+        @media screen and (min-width: 640px) {
+            .native_carousel__container.native_carousel__parool header.carousel-header h1 { /* Parool */
+                font-size: 36px;
+                line-height: 1em;
+            }
+        }
+        /* End of Parool */
+
+        /* Volkskrant */
+        .native_carousel__container.native_carousel__volkskrant  header.carousel-header {
+            border-bottom: 1px solid #eaeaea;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .native_carousel__container.native_carousel__volkskrant header.carousel-header h1 {
+            font-size: 32px;
+            line-height: 35px;
+            color: #eebe01;
+            font-weight: 700;
+            margin: 0 0 10px;
+        }
+
+        .native_carousel__container.native_carousel__volkskrant header sub {
+            color: lightgray;
+            position: absolute;
+            right: 20px;
+            top: 30px;
+            cursor: pointer;
+        }
+
+        .native_carousel__container.native_carousel__volkskrant > header {
+            border-bottom: 1px solid #eaeaea;
+            margin: 0 20px;
+        }
+        .native_carousel__container.native_carousel__volkskrant header div.arrow-container {
+            right: 0;
+            bottom: 5px;
+        }
+        /* End of Volkskrant */
+
+        /* Trouw */
+        .native_carousel__container.native_carousel__trouw > header { /* Trouw */ 
+            position: relative;
+            width: 100%;
+        } 
+        .native_carousel__container.native_home-carrousel.native_carousel__trouw .carousel-header {
+            margin: 0 0 0 10px;
+        }
+        .native_carousel__container.native_carousel__trouw .native-carousel__wrapper {
+            width: 100%;
+            padding-top: 10px;
+        }
+
+        .native_carousel__container.native_carousel__trouw header.carousel-header h1 { /* Trouw */
+            font-size: 28px;
+            font-weight: 300;
+            color: #973d98;
+            line-height: 30px;
+            display: inline;
+            margin: 0;
+            background-color: #fff;
+            padding: 0 5px 0 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .native_carousel__container.native_carousel__trouw header.carousel-header::after { /* Trouw */
+            bottom: 59px;
+            content: "";
+            height: 1px;
+            width: 100%;
+            background-color: #000;
+            position: absolute;
+            left: 0;
+            bottom: 20px;
+            z-index: 0;
+        }
+
+        .native_carousel__container.native_carousel__trouw header.carousel-header sub { /* Trouw */
+            color: lightgray;
+            position: absolute;
+            right: 20px;
+            top: 30px;
+            cursor: pointer;
+        }
+
+        .native_carousel__container.native_carousel__trouw header div.arrow-container {
+            right: 0;
+            bottom: 0;
+        }
+
+        /* Trouw Carousel header Styling */
+        @media screen and (min-width: 960px) {
+            .native_carousel__container.native_carousel__trouw header.carousel-header h1 {
+                font-size: 36px;
+                line-height: 70px;
+                letter-spacing: -0.3px;
+            }
+            .native_carousel__container.native_carousel__trouw header.carousel-header::after {
+                bottom: 40px;
+            }
+            .native_carousel__container.native_carousel__trouw header div.arrow-container {
+                top: 5px;
+            }
+        }
+
+        /* End of Trouw */
+
+        /* Humo */
+        .native_carousel__container.native_carousel__humo header.carousel-header {
+            position: relative;
+            margin: 0 20px 10px;
+        }
+
+        .native_carousel__container.native_carousel__humo header.carousel-header h1.native-carousel__title { /* Humo */
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 65px;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .native_carousel__container.native_carousel__humo header.carousel-header h3.native-carousel__subtitle { /* Humo */
+            text-align: center;
+            color: #eebe01;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 15px;
+            position: relative;
+            margin: 10px 0 0 0;
+        }
+
+        .native_carousel__container.native_carousel__humo header.carousel-header h3.native-carousel__subtitle::before { /* Humo */
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: #000;
+            top: calc(50% - 1.5px);
+            left: 0;
+            position: absolute;
+        }
+
+        .native_carousel__container.native_carousel__humo header.carousel-header h3.native-carousel__subtitle span {
+            background-color: #fff;
+            padding: 10px 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .native_carousel__container.native_carousel__humo header div.arrow-container {
+            right: 0;
+            bottom: 14px;
+        } 
+        /* End of HUMO*/
+
+        /* deMorgen */
+
+        /* End of deMorgen */
+
+    /* End of Text Styling - Carousel Header */
+/* End of Text Styling */
+
+/* Carousel Grid Styling */
+        /* Arrow styling */
+        input.btn_slide {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+    
+        .arrow-wrapper {
+            height: 24px;
+            width: 70px;
+            position: relative;
+            background: #fff;
+        }
+    
+        .arrow {
+            vertical-align: top;
+            cursor: pointer;
+        }
+    
+        .arrow:first-of-type {
+            margin-right: 30px;
+        }
+
+        .arrow:last-of-type {
+            margin-left: 30px;
+        }
+    
+        .arrow[data-active="inactive"] svg {
+            fill: #f1f1f1;
+        }
+
+        .arrow[data-active="active"] svg {
+            fill: #000;
+        }
+    
+        .arrow svg {
+            content: "";
+            position: absolute;
+            height: 24px;
+            width: 24px;
+        }
+
+        @media screen and (min-width: 640px) {
+            .arrow svg {
+                height: 24px;
+                width: 24px;
+            }
+        
+            .arrow:first-of-type {
+                margin-right: 20px;
+            }
+        }
+        /* End of Arrow styling */
+
+    section.native_carousel__container {
+        width: 100%;
+        position: relative;
+    }
+    
+    div.native-carousel__wrapper {
+        position: relative;
+        width: inherit;
+        font-size: 0;
+    }
+
+    /* Every title except HUMO */
+    section.native_carousel__container:not(.native_carousel__trouw) div.native-carousel__wrapper::after { /* Border Bottom */
+        content: '';
+        width: calc(100% - 40px);
+        border-bottom: 1px solid #eaeaea;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+    }
+    /* HUMO */
+    section.native_carousel__container.native_carousel__humo div.native-carousel__wrapper::after { /* Border Bottom HUMO */
+        content: '';
+        width: calc(100% - 40px);
+        border-bottom: 1px solid rgba(0,0,0,1);
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+    }
+    @media screen and (min-width: 640px) {
+        article.branded-aankeiler.hmp-carousel.branded-aankeiler-square.native-carousel-entry { /* remove padding from article */
+            padding: 0;
+        }
+    
+        section.native_carousel__container.native_carousel__trouw {
+            width: 630px;  
+        }
+        
+        .native_carousel__container.native_carousel__trouw .native-carousel__wrapper {
+            width: 630px;
+        }
+        
+        .branded-aankeiler:first-child.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-column-size='2'],
+        .branded-aankeiler:first-child.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-column-size='3'],
+        .branded-aankeiler:first-child.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-column-size='4'] {
+            width: 610px;
+        }
+
+        section.native_carousel__container {
+            width: 640px;
+        }
+
+        section.native_carousel__container.native_home-carrousel div.native-carousel__wrapper { /* Height of carrousel (Homepage and detailpage only) */
+            height: 301px;
+        }
+    
+        section.native_carousel__container div.native-carousel__wrapper { /* Height of carrousel (Sectie pagina only) */
+            height: 1260px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
+
+        section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article, /* Volkskrant */
+        section.native_carousel__container.native_carousel__parool div.native-carousel__wrapper article, /* Parool */
+        section.native_carousel__container.native_carousel__humo div.native-carousel__wrapper article { /* Humo */
+            width: 280px;
+            height: 280px;
+            margin: 20px;
+        }  
+
+        section.native_carousel__container.native_carousel__trouw div.native-carousel__wrapper article,
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square {
+            width: 295px !important;
+            height: 295px;
+        }
+    
+        section.native_carousel__container.native_carousel__parool div.native-carousel__wrapper article.branded-aankeiler.col2, /* Parool & Volkskrant */
+        section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.col2 { /* 2 Columns */
+            width: 600px;
+        }   
+        
+        section.native_carousel__container.native_carousel__trouw div.native-carousel__wrapper article.branded-aankeiler.col2 { /* Trouw */
+            width: 610px;
+        }
+    
+        section.native_carousel__container.native_carousel__parool div.native-carousel__wrapper article.branded-aankeiler.col3, /* Parool */
+        section.native_carousel__container.native_carousel__parool div.native-carousel__wrapper article.branded-aankeiler.col4, /* Parool */
+        section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.col3, /* Volkskrant */
+        section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.col4 { /* Volkskrant */
+            width: calc(100% - 40px); /* Width is 920px */
+        } 
+
+        section.native_carousel__container.native_carousel__trouw div.native-carousel__wrapper article.branded-aankeiler.col3, /* trouw */
+        section.native_carousel__container.native_carousel__trouw div.native-carousel__wrapper article.branded-aankeiler.col4 { /* trouw */
+            width: 100%;
+            box-sizing: border-box;
+        } 
+        
+        section.native_carousel__container.native_carousel__parool div.native-carousel__wrapper article.branded-aankeiler.col2, /* Parool */  
+        section.native_carousel__container.native_carousel__parool div.native-carousel__wrapper article.branded-aankeiler.col3, /* Parool */ 
+        section.native_carousel__container.native_carousel__parool div.native-carousel__wrapper article.branded-aankeiler.col4, /* Parool */
+        section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.col2, /* Volkskrant */
+        section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.col3, /* Volkskrant */
+        section.native_carousel__container.native_carousel__volkskrant div.native-carousel__wrapper article.branded-aankeiler.col4, /* Volkskrant */
+        section.native_carousel__container.native_carousel__humo div.native-carousel__wrapper article.branded-aankeiler.col2, /* humo */
+        section.native_carousel__container.native_carousel__humo div.native-carousel__wrapper article.branded-aankeiler.col3, /* humo */
+        section.native_carousel__container.native_carousel__humo div.native-carousel__wrapper article.branded-aankeiler.col4 { /* humo */
+            height: 600px;
+        }   
+
+        section.native_carousel__container.native_carousel__trouw div.native-carousel__wrapper article.branded-aankeiler.col2, /* Trouw */
+        section.native_carousel__container.native_carousel__trouw div.native-carousel__wrapper article.branded-aankeiler.col3, /* Trouw */
+        section.native_carousel__container.native_carousel__trouw div.native-carousel__wrapper article.branded-aankeiler.col4 { /* Trouw */
+            height: 610px;
+        }   
+    
+
+    }
+
+/* End of Carousel Grid Styling */
+
+
+/* Detail Pagina Carousel */
+    /* Detail Pagina Carousel Grid */
+    @media screen and (min-width: 640px) {
+            
+        article:not(.hmp-carousel).branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry {
+            position: absolute;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="0"] { /* First Tile */
+            top: 0;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="1"] { /* Second Tile */
+            top: 630px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="2"] { /* Third Tile */
+            top: 630px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="3"] { /* Fourth Tile */
+            top: 945px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="4"] { /* Fifth Tile */
+            top: 945px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="5"] { /* Sixth Tile */
+            top: 1260px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="6"] { /* Seventh Tile */
+            top: 1260px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="7"] { /* Eight Tile */
+            top: 1575px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="8"] { /* Ninth Tile */
+            top: 1575px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="9"] { /* 10th Tile */
+            top: 1890px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="10"] { /* 11th Tile */
+            top: 1890px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="11"] { /* 12th Tile */
+            top: 2205px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="12"] { /* 13th Tile */
+            top: 2205px;
+            left: 315px;
+        }  
+            article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="13"] { /* 14th Tile */
+            top: 2520px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="14"] { /* 15th Tile */
+            top: 2520px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="15"] { /* 16th Tile */
+            top: 2835px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="16"] { /* 17th Tile */
+            top: 2835px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="17"] { /* 18th Tile */
+            top: 3150px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="18"] { /* 19th Tile */
+            top: 3150px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="19"] { /* 20th Tile */
+            top: 3465px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="20"] { /* 21th Tile */
+            top: 3465px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="21"] { /* 22th Tile */
+            top: 3780px;
+            left: 0;
+        }
+    }
+    @media screen and (min-width: 960px) {
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="0"] { /* First Tile */
+            top: 0;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="1"] { /* Second Tile */
+            top: 0;
+            left: 630px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="2"] { /* Third Tile */
+            top: 315px;
+            left: 630px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="3"] { /* Fourth Tile */
+            top: 630px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="4"] { /* Fifth Tile */
+            top: 630px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="5"] { /* Sixth Tile */
+            top: 630px;
+            left: 630px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="6"] { /* Seventh Tile */
+            top: 945px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="7"] { /* Eight Tile */
+            top: 945px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="8"] { /* Ninth Tile */
+            top: 945px;
+            left: 630px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="9"] { /* 10th Tile */
+            top: 1260px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="10"] { /* 11th Tile */
+            top: 1260px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="11"] { /* 12th Tile */
+            top: 1260px;
+            left: 630px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="12"] { /* 13th Tile */
+            top: 1575px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="13"] { /* 14th Tile */
+            top: 1575px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="14"] { /* 15th Tile */
+            top: 1575px;
+            left: 630px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="15"] { /* 16th Tile */
+            top: 1890px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="16"] { /* 17th Tile */
+            top: 1890px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="17"] { /* 18th Tile */
+            top: 1890px;
+            left: 630px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="18"] { /* 19th Tile */
+            top: 2205px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="19"] { /* 20th Tile */
+            top: 2205px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="20"] { /* 21th Tile */
+            top: 2205px;
+            left: 630px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="21"] { /* 22th Tile */
+            top: 2520px;
+            left: 0;
+        }
+    }
+    @media screen and (min-width: 1320px) {
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="0"] { /* First Tile */
+            top: 0;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="1"] { /* Second Tile */
+            top: 0;
+            left: 630px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="2"] { /* Third Tile */
+            top: 0;
+            left: 945px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="3"] { /* Fourth Tile */
+            top: 315px;
+            left: 630px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="4"] { /* Fifth Tile */
+            top: 315px;
+            left: 945px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="5"] { /* Sixth Tile */
+            top: 630px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="6"] { /* Seventh Tile */
+            top: 630px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="7"] { /* Eight Tile */
+            top: 630px;
+            left: 630px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="8"] { /* Ninth Tile */
+            top: 630px;
+            left: 945px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="9"] { /* 10th Tile */
+            top: 945px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="10"] { /* 11th Tile */
+            top: 945px;
+            left: 315px;
+        }       
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="11"] { /* 12th Tile */
+            top: 945px;
+            left: 630px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="12"] { /* 13th Tile */
+            top: 945px;
+            left: 945px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="13"] { /* 14th Tile */
+            top: 1260px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="14"] { /* 15th Tile */
+            top: 1260px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="15"] { /* 16th Tile */
+            top: 1260px;
+            left: 630px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="16"] { /* 17th Tile */
+            top: 1260px;
+            left: 945px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="17"] { /* 18th Tile */
+            top: 1890px;
+            left: 0;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="18"] { /* 19th Tile */
+            top: 1890px;
+            left: 315px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="19"] { /* 20th Tile */
+            top: 1890px;
+            left: 630px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="20"] { /* 20th Tile */
+            top: 1890px;
+            left: 945px;
+        }   
+        article.branded-aankeiler.branded-aankeiler--trouw.branded-aankeiler-square.native-carousel-entry[data-position="21"] { /* 20th Tile */
+            top: 2205px;
+            left: 0;
+        }
+    }
+    /* End of Detail Pagina Carousel Grid */
+    /* Read More Detail Pagina Carousel */
+    .native-read-more {
+        display: none;
+        opacity: 1;
+        transition: opacity .2s ease;
+    }
+
+    .native-read-more .native-read-more__wrapper {
+        bottom: 0;
+        transform: translateY(50%);
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        left: 0;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+    }
+
+    .native-read-more.native-read-more--parool .native-read-more__wrapper a { /* Parool */
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        text-decoration: none;
+        background: #111;
+        color: #fff;
+        font-family: 'Roboto',Arial,Helvetica Neue,Helvetica,"sans-serif";
+        padding: 5px 35px 5px 20px;
+        position: relative;
+    } 
+    .native-read-more.native-read-more--parool .native-read-more__wrapper a::after { /* Parool */
+        content: "";
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        transform: rotate(50deg) skew(10deg);
+        position: absolute;
+        right: 20px;
+        height: 7px;
+        width: 7px;
+        top: 10px;
+    }
+
+    .native-read-more.native-read-more--volkskrant .native-read-more__wrapper a { /* Volkskrant */
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 14px;
+        background: #fff;
+        border: 1px solid #eaeaea;
+        border-radius: 999px;
+        padding: 8px 15px 6px;
+        font-family: 'Roboto',Arial,Helvetica Neue,Helvetica,"sans-serif";
+        color: #727272;
+        text-transform: uppercase;
+        text-decoration: none;
+    }    
+    .native-read-more.native-read-more--volkskrant:hover .native-read-more__wrapper a { /* Volkskrant */
+            color: #111;
+            cursor: pointer;
+    }
+
+    .native-read-more.native-read-more--trouw .native-read-more__wrapper a { /* Trouw */
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 14px;
+        background: #fff;
+        border: 1px solid #eaeaea;
+        border-radius: 999px;
+        padding: 8px 15px 6px;
+        font-family: 'Roboto',Arial,Helvetica Neue,Helvetica,"sans-serif";
+        letter-spacing: -0.3px;
+        color: #727272;
+        text-transform: uppercase;
+        text-decoration: none;
+    }   
+    .native-read-more.native-read-more--trouw:hover .native-read-more__wrapper a { /* Trouw */
+            color: #111;
+            cursor: pointer;
+    }
+
+    @media screen and (min-width: 640px) {
+        .native-read-more {
+            display: block;
+        }
+    }
+    /*
+    End of Read More
+    */
+/* End of Detail Pagina Carousel */

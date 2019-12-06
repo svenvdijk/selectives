@@ -1,0 +1,25 @@
+
+/* 352x280 */
+div[data-id="dfp-imu2"],
+article[data-id="dfp-imu2"] {
+    background-color: #fff;
+}
+
+/* 300x600 */
+div[data-id="dfp-sky1"],
+article[data-id="dfp-sky1"] {
+    background-color: #fff;
+}
+
+/* 300x250 */
+div[data-id="dfp-imu1"],
+article[data-id="dfp-imu1"] {
+    background-color: #fff;
+}
+
+@media screen and (min-width: 640px) {
+    div[data-id="dfp-imu1"],
+    article[data-id="dfp-imu1"] {
+        align-items: baseline;
+    }
+}
