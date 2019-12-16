@@ -1,6 +1,7 @@
     var teaserSize = 'half'; //renderContext.fill.creatives[0].custom.selectivesTeaser;
     var textPosition = 'center'; //renderContext.fill.creatives[0].custom.selectivesTextAlign;
     var contentPosition = 'bottom'; //renderContext.fill.creatives[0].custom.selectivesContentLocation;
+    var rating = ''; 
 
     /* TEASER |  For 280x280 and 300x600
         Teaser will change the display of the banners too full or half image based on data in Polar Custom Field.
@@ -70,40 +71,6 @@
     }
 
     $('.title').textStyling();
-
-    /* Only for 280x280
-        AspectRatio is a function for the 280x280 banner. For mobile it will calculate the perfect sizes. 
-
-        If screenssize has a greater width than 640px it will change the image size to 280x140. 
-        Else the screensize will be calcuted based on aspect ratio
-    */
-    var windowWidth = $(window.top).width(); 
-    $.fn.aspectRatio = function(event) {
-        var width = $(this).width();
-        var ratioWidth = 2;
-        var ratioHeight = 1;
-        var ratio = width / ratioWidth;
-        var height = ratio * ratioHeight;
-        var articleClassList = $(this).parent().parent().parent('article.branded-aankeiler')[0].classList;
-
-        for(var i = 0; i < articleClassList.length; i++) { // iterate over classes
-            if(articleClassList.length > 8) {
-                break;
-            }
-            if(articleClassList[i] == 'half') { // See if the class 'half' is present
-                if (windowWidth < 640) {
-                    $(this).css({ 'height': + height + 'px' });
-                } else {
-                    $(this).css({ 'height': + '140' + 'px' });
-                }
-            }
-        }
-    }
-    // $('.image-wrapper').aspectRatio();
-
-    // $(window.top).on('resize', function(){
-    //     $('.image-wrapper').aspectRatio();
-    // });
 
     /* For all sizes
         ImageSource will get the right image for the banner. The function looks at the classlist. 

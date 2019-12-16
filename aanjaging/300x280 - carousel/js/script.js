@@ -1,4 +1,4 @@
-var teaserSize = 'half'; // renderContext.fill.creatives[0].custom.selectiveTeaser;
+var teaserSize = 'full'; // renderContext.fill.creatives[0].custom.selectiveTeaser;
 var textPosition = 'center'; // renderContext.fill.creatives[0].custom.selectiveAlignText;
 var contentPosition = 'center'; // renderContext.fill.creatives[0].custom.selectiveContentPosition;
 
@@ -8,55 +8,31 @@ $.fn.teaser = function() {
 }
 $('.branded-aankeiler').teaser();
 
+/* TEXT ALIGN |  For all sizes
+    Text align will change the position or the text align based on data in Polar Custom Field.
+*/
 $.fn.textAlign = function() {
-    var text = $(this).children();
     var articleClassList = $(this).parent().parent().parent('article.branded-aankeiler')[0].classList;
-
     for(var i = 0; i < articleClassList.length; i++) { // iterate over classes
-        if(articleClassList[i] == 'full') { // See if the class 'full' is present
-            for(var i = 0; i < text.length; i++) {
-                $(text[i]).css({ 'text-align': textPosition });
-            }
-            $(this).addClass(contentPosition);
+
+        if(articleClassList.length > 8) {
+            break;
         }
-    }
+
+        if(articleClassList[i] == 'full') { // See if the class 'full' is present
+            $(this).css({ 'text-align': textPosition });
+            $(this).addClass(contentPosition);
+            break; //Quit loop
+        } 
+        // HUMO ONLY Center always on half
+        if(articleClassList[i] == 'half') { 
+            $(this).css({ 'text-align': 'center' });
+            break; //Quit loop
+        }
+        // END HUMO ONLY
+    }    
 }
 $('.content-wrapper').textAlign();
-
-$.fn.responsiveImage = function() {
-    // var imageWidth = $(this).width();
-    // var halfImageHeight = imageWidth / 2;
-    // var article = $(this).parent('.wrapper').parent('a').parent('.branded-aankeiler');
-    // article.class = article[0].classList;
-    // article.class.half = article.class.contains('half');
-    // article.class.full = article.class.contains('full');
-
-    // console.log(article.data)
-
-
-    // var source;
-    // // console.log(this)
-
-    // for(i = 0; i < this.length; i++) {
-    //     source = $(this[i]).children().children();
-
-    //     for(x = 0; x < source.length; x++) {
-    //         // console.log(source[x])
-    //     }
-    // }
-
-
-
-
-    // if(article.class.half && $(window).width() < 640) {
-    //     $(this).css({'height': + halfImageHeight + 'px'});
-    // }
-    // if(article.class.half && $(window).width() >= 640) {
-    //     $(this).css({'height': '50%'});
-    // } 
-}
-
-$('.image-wrapper').responsiveImage(); // Must be changed on window width
 
 $.fn.carousel = function() {
 
@@ -249,7 +225,7 @@ $.fn.image = function() {
         }
 
         picture = $(element).find('picture')[0];
-        $(picture).css({'background' : 'url(' + srcset + ') no-repeat'});
+        $(picture).css({'background-image' : 'url(' + srcset + ')'});
     });
 }
 

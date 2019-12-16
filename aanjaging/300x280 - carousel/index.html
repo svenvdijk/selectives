@@ -3,12 +3,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>demorgen Carousel</title>
-    <link rel="stylesheet" href="../../style.css">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>              
-    <section class="native_carousel__container native_home-carrousel native_carousel__demorgen">
+    <section class="native_carousel__container native_home-carrousel native_carousel__volkskrant">
         <header class="carousel-header">
             <div class="arrow-container" aria-hidden="false">
 
@@ -28,87 +28,99 @@
                 </div>
 
             </div>
-            <h1 class="native-carousel__title">partnerbijdrage</h1>
+            <h1 class="native-carousel__title">van onze adverteerders</h1>
         </header>
         <div class="native-carousel__wrapper responsive">
  
-            <article class="branded-aankeiler branded-aankeiler--demorgen branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
+            <article class="branded-aankeiler branded-aankeiler--volkskrant branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <a href="#">
                     <div class="wrapper">
                         <div class="image-wrapper">
                             <picture>
-                                <source srcset="../../images/600x600.jpg" data-size="full" data-col="1">
-                                <source srcset="../../images/800x400.jpg" data-size="full" data-col="2">
-                                <source srcset="../../images/1314x400.jpg" data-size="full" data-col="3">
-                                <source srcset="../../images/1771x400.jpg" data-size="full" data-col="4">
+                                <source srcset="../assets/images/600x600.jpg" data-size="full" data-col="1">
+                                <source srcset="../assets/images/800x400.jpg" data-size="full" data-col="2">
+                                <source srcset="../assets/images/1314x400.jpg" data-size="full" data-col="3">
+                                <source srcset="../assets/images/1771x400.jpg" data-size="full" data-col="4">
 
-                                <source srcset="../../images/600x300.jpg" data-size="half" data-col="1">
-                                <source srcset="../../images/857x200.jpg" data-size="half" data-col="2">
-                                <source srcset="../../images/1314x200.jpg" data-size="half" data-col="3">
-                                <source srcset="../../images/1771x200.jpg" data-size="half" data-col="4">
+                                <source srcset="../assets/images/600x300.jpg" data-size="half" data-col="1">
+                                <source srcset="../assets/images/857x200.jpg" data-size="half" data-col="2">
+                                <source srcset="../assets/images/1314x200.jpg" data-size="half" data-col="3">
+                                <source srcset="../assets/images/1771x200.jpg" data-size="half" data-col="4">
                             </picture>
                         </div>
                         <div class="content-wrapper gradient">
-                            <sub class="label label--demorgen dark"><span>Aangeboden door</span> label</sub>
+                            <sub class="label label--volkskrant dark">
+                                <div>
+                                    <span>Aangeboden door </span>{{sponsor.name}}
+                                </div>
+                            </sub>
                             <header class="title">Hiddema: 'Otten pakte partijgeld niet met kwade bedoelingen'</header>
                         </div>
                     </div>
                 </a>
             </article>
-            <article class="branded-aankeiler branded-aankeiler--demorgen branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
+            <article class="branded-aankeiler branded-aankeiler--volkskrant branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <a href="#">
                     <div class="wrapper">
                         <div class="image-wrapper">
                             <picture>
-                                <source srcset="../../images/280x280.jpg" data-size="full" data-col="1">
-                                <source srcset="../../images/600x280.jpg" data-size="full" data-col="2">
-                                <source srcset="../../images/920x280.jpg" data-size="full" data-col="3">
-                                <source srcset="../../images/1240x280.jpg" data-size="full" data-col="4">
+                                <source srcset="../assets/images/280x280.jpg" data-size="full" data-col="1">
+                                <source srcset="../assets/images/600x280.jpg" data-size="full" data-col="2">
+                                <source srcset="../assets/images/920x280.jpg" data-size="full" data-col="3">
+                                <source srcset="../assets/images/1240x280.jpg" data-size="full" data-col="4">
 
-                                <source srcset="../../images/280x140.jpg" data-size="half" data-col="1">
-                                <source srcset="../../images/600x140.jpg" data-size="half" data-col="2">
-                                <source srcset="../../images/920x140.jpg" data-size="half" data-col="3">
-                                <source srcset="../../images/1240x140.jpg" data-size="half" data-col="4">
+                                <source srcset="../assets/images/280x140.jpg" data-size="half" data-col="1">
+                                <source srcset="../assets/images/600x140.jpg" data-size="half" data-col="2">
+                                <source srcset="../assets/images/920x140.jpg" data-size="half" data-col="3">
+                                <source srcset="../assets/images/1240x140.jpg" data-size="half" data-col="4">
                             </picture>
                         </div>
                         <div class="content-wrapper gradient">
-                            <sub class="label label--demorgen dark"><span>Aangeboden door</span> label</sub>
+                            <sub class="label label--volkskrant dark">
+                                <div>
+                                    <span>Aangeboden door </span>{{sponsor.name}}
+                                </div>
+                            </sub>
                             <header class="title">Hiddema: 'Otten pakte partijgeld niet met kwade bedoelingen'</header>
                         </div>
                     </div>
                 </a>
             </article>
             
-            <article class="branded-aankeiler branded-aankeiler--demorgen branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
+            <article class="branded-aankeiler branded-aankeiler--volkskrant branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <a href="#">
                     <div class="wrapper">
                         <div class="image-wrapper">
                             <picture>
-                                <source srcset="../../images/280x280.jpg" data-size="full" data-col="1">
-                                <source srcset="../../images/600x280.jpg" data-size="full" data-col="2">
-                                <source srcset="../../images/920x280.jpg" data-size="full" data-col="3">
-                                <source srcset="../../images/1240x280.jpg" data-size="full" data-col="4">
+                                <source srcset="../assets/images/280x280.jpg" data-size="full" data-col="1">
+                                <source srcset="../assets/images/600x280.jpg" data-size="full" data-col="2">
+                                <source srcset="../assets/images/920x280.jpg" data-size="full" data-col="3">
+                                <source srcset="../assets/images/1240x280.jpg" data-size="full" data-col="4">
 
-                                <source srcset="../../images/280x140.jpg" data-size="half" data-col="1">
-                                <source srcset="../../images/600x140.jpg" data-size="half" data-col="2">
-                                <source srcset="../../images/920x140.jpg" data-size="half" data-col="3">
-                                <source srcset="../../images/1240x140.jpg" data-size="half" data-col="4">
+                                <source srcset="../assets/images/280x140.jpg" data-size="half" data-col="1">
+                                <source srcset="../assets/images/600x140.jpg" data-size="half" data-col="2">
+                                <source srcset="../assets/images/920x140.jpg" data-size="half" data-col="3">
+                                <source srcset="../assets/images/1240x140.jpg" data-size="half" data-col="4">
                             </picture>
                         </div>
                         <div class="content-wrapper gradient">
-                            <sub class="label label--demorgen dark"><span>Aangeboden door</span> label</sub>
+                            <sub class="label label--volkskrant dark">
+                                <div>
+                                    <span>Aangeboden door </span>{{sponsor.name}}
+                                </div>
+                            </sub>
                             <header class="title">Hiddema: 'Otten pakte partijgeld niet met kwade bedoelingen'</header>
                         </div>
                     </div>
                 </a>
             </article>
-            <!-- <article class="branded-aankeiler branded-aankeiler--demorgen branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
+            <!-- <article class="branded-aankeiler branded-aankeiler--volkskrant branded-aankeiler-square hmp-carousel native-carousel-entry" data-col="">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <a href="#">
@@ -127,7 +139,7 @@
                             </picture>
                         </div>
                         <div class="content-wrapper gradient">
-                            <sub class="label label--demorgen dark"><span>aangeboden door</span> label</sub>
+                            <sub class="label label--volkskrant dark"><span>aangeboden door</span> label</sub>
                             <header class="title">Hiddema: 'Otten pakte partijgeld niet met kwade bedoelingen'</header>
                         </div>
                     </div>

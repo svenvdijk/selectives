@@ -5,12 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>600x280</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../../style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <article class="branded-aankeiler branded-aankeiler--demorgen branded-aankeiler-large full">
+    <!--  
+    <   branded-aankeiler-square    == 280x280 && 300x250   >
+    <   branded-aankeiler-rectangle == 300x600              >
+    <   branded-aankeiler-large     == 352x280              >
+
+    <   Changes these classes to title specific.
+    <   This way you change the look of the banner to the different title.
+
+        volkskrant: 
+        branded-aankeiler--volkskrant
+        label--volkskrant
+
+        trouw: 
+        branded-aankeiler--trouw
+        label--trouw
+
+        parool: 
+        branded-aankeiler--parool
+        label--parool
+        
+        humo: 
+        branded-aankeiler--humo
+        label--humo
+
+        de morgen: 
+        branded-aankeiler--demorgen
+        label--demorgen
+     -->
+
+    <article class="branded-aankeiler branded-aankeiler--humo branded-aankeiler-large full">
         <a href="{{link}}">
             <div class="wrapper">
                 <div class="image-wrapper">
@@ -20,14 +49,18 @@
                     </picture>
                 </div>
                 <div class="content-wrapper gradient">
-                    <sub class="label label--demorgen light"><span>Aangeboden door </span>{{sponsor.name}}</sub>
+                    <sub class="label label--humo light">
+                        <div>
+                            <span>Aangeboden door </span>{{sponsor.name}}
+                        </div>
+                    </sub>
                     <header class="title">{{title}}</header>
                 </div>
             </div>
         </a>
     </article>
 
-    <script src="./js/600x280-master.js"></script>
-    <script src="../js/test.js"></script>
+    <!-- <script src="./js/600x280-master.js"></script> -->
+    <script src="../assets/js/master.js"></script>
 </body>
 </html>

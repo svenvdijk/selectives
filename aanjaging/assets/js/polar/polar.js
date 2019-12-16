@@ -157,4 +157,28 @@ function(renderContext) {
         }
     }
     $('.branded-aankeiler', renderContext.$template).imageSource();
+
+    //UTM Code
+    var $links = $('.branded-aankeiler', renderContext.$template).children('a');
+
+    $links.each(function(_, link) {
+
+        var url = link.href;
+
+        url = updateQueryStringParameter(url, "utm_source", "polar");
+        url = updateQueryStringParameter(url, "utm_medium", renderContext.placementData.rule.conditions.iframesize + '-' + renderContext._tag.meta.hostname + '-' + renderContext.placementData.name);
+        url = updateQueryStringParameter(url, "utm_campaign", renderContext.fill.creatives[0].sponsor.name);
+
+        link.href = url;
+    });
+
+    function updateQueryStringParameter(uri, key, value) {
+        var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+        var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+        if (uri.match(re)) {
+            return uri.replace(re, '$1' + key + "=" + value + '$2');
+        } else {
+            return uri + separator + key + "=" + value;
+        }
+    }
 }
