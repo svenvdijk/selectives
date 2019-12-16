@@ -2288,6 +2288,55 @@ Label
     .branded-aankeiler--trouw.full a .wrapper .content-wrapper .title {
         margin-top: 10px;
     }
+
+    /********************************************
+    *   Recensie styling | Ratings styling | 16 December 2019
+    *   Door: Sven van Dijk
+    */
+
+    .branded-aankeiler:not(.branded-aankeiler--humo) .title.rating1::after {
+        content: ' ★☆☆☆☆'
+    }
+    .branded-aankeiler:not(.branded-aankeiler--humo) .title.rating2::after {
+        content: ' ★★☆☆☆'
+    }
+    .branded-aankeiler:not(.branded-aankeiler--humo) .title.rating3::after {
+        content: ' ★★★☆☆'
+    }
+    .branded-aankeiler:not(.branded-aankeiler--humo) .title.rating4::after {
+        content: ' ★★★★☆'
+    }
+    .branded-aankeiler:not(.branded-aankeiler--humo) .title.rating5::after {
+        content: ' ★★★★★'
+    }
+
+        /* HUMO */
+
+        .branded-aankeiler--humo .title.rating1::before {
+            content: '★☆☆☆☆ ';
+            color: #eebe01;
+        }
+        .branded-aankeiler--humo .title.rating2::before {
+            content: '★★☆☆☆ ';
+            color: #eebe01;
+        }
+        .branded-aankeiler--humo .title.rating3::before {
+            content: '★★★☆☆ ';
+            color: #eebe01;
+        }
+        .branded-aankeiler--humo .title.rating4::before {
+            content: '★★★★☆ ';
+            color: #eebe01;
+        }
+        .branded-aankeiler--humo .title.rating5::before {
+            content: '★★★★★ ';
+            color: #eebe01;
+        }
+
+        /* End of HUMO */
+    /*
+    *
+    ********************************************/
 /*
     End of Text Styling
 */

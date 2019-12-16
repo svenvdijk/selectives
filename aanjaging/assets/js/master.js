@@ -1,7 +1,19 @@
     var teaserSize = 'half'; //renderContext.fill.creatives[0].custom.selectivesTeaser;
-    var textPosition = 'center'; //renderContext.fill.creatives[0].custom.selectivesTextAlign;
-    var contentPosition = 'bottom'; //renderContext.fill.creatives[0].custom.selectivesContentLocation;
-    var rating = ''; 
+    var textPosition = 'left'; //renderContext.fill.creatives[0].custom.selectivesTextAlign;
+    var contentPosition = 'center'; //renderContext.fill.creatives[0].custom.selectivesContentLocation;
+    var rating = '5'; //TODO custom field voor de ratings aanmaken in mediavoice.com/custom_field
+
+    function setRating(stars) {
+        // Error handler
+        if(typeof stars == ('undefined' || 'null') || rating == 0) {
+            return false;
+        }
+
+        var ratingClassCSS = 'rating' + stars;
+        document.getElementsByClassName('title')[0].classList.add(ratingClassCSS)
+
+    }
+    setRating(rating)
 
     /* TEASER |  For 280x280 and 300x600
         Teaser will change the display of the banners too full or half image based on data in Polar Custom Field.
@@ -30,7 +42,7 @@
             } 
             // HUMO ONLY
             if(articleClassList[i] == 'half') { 
-                $(this).css({ 'text-align': textPosition });
+                $(this).css({ 'text-align': 'center' });
                 break; //Quit loop
             }
             // END HUMO ONLY
