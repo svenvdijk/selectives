@@ -5,14 +5,23 @@ function(renderContext) {
     var teaserSize = renderContext.fill.creatives[0].custom.selectivesTeaser;
     var textPosition = renderContext.fill.creatives[0].custom.selectivesTextAlign;
     var contentPosition = renderContext.fill.creatives[0].custom.selectivesContentLocation;
+    var rating = renderContext.fill.creatives[0].custom.selectivesRating;
 
+
+    /* CXENSE | For all sizes
+    * Set LocalStorage with multiple values; vertical and salesteam
+    * @author: Sven van Dijk
+    * @contact: s.vandijk@persgroep.nl
+    */
     var campaignName = renderContext.fill.creatives[0].campaigns[0].name;
     var regexSalesTeam = /(nationaal)|(regio(naal)?)/g
 
+    // Filter
     function isBigEnough(value) {
         return value != null;
     }
 
+    // Check Polar campaign name for the sales team
     function getSalesTeam(team) {
         team = team.toLowerCase();
         team = team.split(/\s+/g);
@@ -30,6 +39,7 @@ function(renderContext) {
         }
     }
 
+    // Data object
     var data = {
         branche: {
             name: 'branded_branche',
@@ -41,12 +51,14 @@ function(renderContext) {
         }
     }
 
+    // push data object to the localStorage
     function SaveDataToLocalStorage(data) {
         var a = [];
         a.push(data);
         localStorage.setItem('session', JSON.stringify(a));
     }
 
+    // Event handler
     function setEventListener(banner) {
         banner.addEventListener("click", function clicked(e) {
             e.preventDefault();
@@ -54,10 +66,35 @@ function(renderContext) {
         });
     }
 
-    var bannerAnchor = window.top.document.getElementsByClassName('selectives-link', renderContext.$template); //, renderContext.$template
+    // Set a EventListener on all elements with the classname 'branded-link'
+    var bannerAnchor = window.top.document.getElementsByClassName('branded-link', renderContext.$template); //, renderContext.$template
     for (var index = 0; index < bannerAnchor.length; index++) {
         var element = bannerAnchor[index];
         setEventListener(element)
+    }
+
+    // RATING | For all sizes
+    // The function will add a class that has been styled with an after or before depending on what newstitle.
+    // Function Created @ 16 december 2019 | By: Sven van Dijk
+    function setRating(rating, element) {
+        // Error handler
+        if(typeof rating == ('undefined' || 'null') || rating == 0) {
+            return false;
+        }
+        // new class
+        var ratingClassCSS = 'rating' + rating;
+        // add the new class to the title
+        element.classList.add(ratingClassCSS);
+    }
+    
+    var teaserTitle =  window.top.document.getElementsByClassName('title');
+    for (var index = 0; index < teaserTitle.length; index++) {
+        var element = teaserTitle[index];
+
+        if (rating != 'none') {
+            rating = parseInt(rating, 'stars');
+            setRating(rating, element)
+        }
     }
 
     /* TEASER |  For 280x280 and 300x600
@@ -67,7 +104,7 @@ function(renderContext) {
        $(this).addClass(teaserSize);
        $(this).find('.image-wrapper picture').addClass(teaserSize);
     }
-    $('.branded-aankeiler', renderContext.$template).teaser();
+    $('.adjustable-size', renderContext.$template).teaser();
  
     /* TEXT ALIGN |  For all sizes
         Text align will change the position or the text align based on data in Polar Custom Field.
@@ -84,54 +121,56 @@ function(renderContext) {
                 $(this).css({ 'text-align': textPosition });
                 $(this).addClass(contentPosition);
                 break; //Quit loop
+            } 
+            // HUMO ONLY
+            if(articleClassList[i] == 'half') { 
+                $(this).css({ 'text-align': 'center' });
+                break; //Quit loop
             }
+            // END HUMO ONLY
         }    
     }
     $('.content-wrapper', renderContext.$template).textAlign();
 
+    /*
+    For all banners ->
+    @Function name: Text Styling
+    @Created by: Sven van Dijk
 
-    /* Only for 280x280
-        AspectRatio is a function for the 280x280 banner. For mobile it will calculate the perfect sizes. 
+    */ 
+    $.fn.textStyling = function() {
+        var text = this[0].innerText
+        var err = 'Error: No Bold Text Found!'
+        var regexBold = /(?:^| )(_(?:[\w ]+?)_|([*~])(?:[\w ]+?)\2)(?= |$)/gm;
 
-        If screenssize has a greater width than 640px it will change the image size to 280x140. 
-        Else the screensize will be calcuted based on aspect ratio
-    */
-    var windowWidth = $(window.top).width(); 
-    $.fn.aspectRatio = function(event) {
-        var width = $(this).width();
-        var ratioWidth = 2;
-        var ratioHeight = 1;
-        var ratio = width / ratioWidth;
-        var height = ratio * ratioHeight;
-        var articleClassList = $(this).parent().parent().parent('article.branded-aankeiler')[0].classList;
+        if(text.split(regexBold)) {
+            textArray = text.split(regexBold);
 
-        for(var i = 0; i < articleClassList.length; i++) { // iterate over classes
-            if(articleClassList.length > 8) {
-                break;
-            }
-            if(articleClassList[i] == 'half') { // See if the class 'half' is present
-                if (windowWidth < 640) {
-                    $(this).css({ 'height': + height + 'px' });
-                } else {
-                    $(this).css({ 'height': + '140' + 'px' });
+            for(i = 0; i < textArray.length; i++) {
+                if(textArray[i] != undefined || textArray[i] != null) {
+                    textArray[i] = textArray[i].replace('_', '<b>');
+                    textArray[i] = textArray[i].replace('_', '</b>');
                 }
+                if(i == 300) {break;}
             }
-        }
-    }
-    $('.image-wrapper', renderContext.$template).aspectRatio();
 
-    $(window.top).on('resize', function(){
-        $('.image-wrapper', renderContext.$template).aspectRatio();
-    });
+            var textAsString = textArray.join(' '); 
+            textAsString = textAsString.toString();
+            console.log(textAsString);
+            this[0].innerHTML = textAsString;
+
+        } else { 
+            console.error(err)
+        }  
+    }
+
+    $('.title', renderContext.$template).textStyling();
 
     /* For all sizes
         ImageSource will get the right image for the banner. The function looks at the classlist. 
-        
-        If the class 'half' or 'full' exists then it will use the source with the same data-attributes.
-        Else
+        Get the right src set based on the data attribute [data-size]
     */
    $.fn.imageSource = function() {
-        var dataSize;
         var array = Array.prototype.slice.call(this);
 
         for(var i = 0; i < array.length; i++) {
@@ -143,12 +182,19 @@ function(renderContext) {
             var picture = $(anchor).children('.wrapper').children('.image-wrapper').children('picture');
             picture.class = picture[0].classList;
             var source = $(picture).children('source');
-        
+            
             for(var i = 0; i < source.length; i++) {
                 if(source.length > 8) {
                     break;
                 }
-                source.size = source[i].attributes['data-size'].value;     
+
+                /* If Interview is selected it will get the sqaure image */
+                if(picture.class == 'interview') {
+                    picture.class = 'full';
+                }
+                /* End of Interview */
+
+                source.size = source[i].attributes['data-size'].value;
                 if(source.size == picture.class) {
                     source.src = source[i].attributes['srcset'].value;
                 }
@@ -157,28 +203,4 @@ function(renderContext) {
         }
     }
     $('.branded-aankeiler', renderContext.$template).imageSource();
-
-    //UTM Code
-    var $links = $('.branded-aankeiler', renderContext.$template).children('a');
-
-    $links.each(function(_, link) {
-
-        var url = link.href;
-
-        url = updateQueryStringParameter(url, "utm_source", "polar");
-        url = updateQueryStringParameter(url, "utm_medium", renderContext.placementData.rule.conditions.iframesize + '-' + renderContext._tag.meta.hostname + '-' + renderContext.placementData.name);
-        url = updateQueryStringParameter(url, "utm_campaign", renderContext.fill.creatives[0].sponsor.name);
-
-        link.href = url;
-    });
-
-    function updateQueryStringParameter(uri, key, value) {
-        var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
-        var separator = uri.indexOf('?') !== -1 ? "&" : "?";
-        if (uri.match(re)) {
-            return uri.replace(re, '$1' + key + "=" + value + '$2');
-        } else {
-            return uri + separator + key + "=" + value;
-        }
-    }
 }

@@ -1,6 +1,6 @@
 <div class="ad_wrapper volkskrant_ad_wrapper">
     <article class="branded-aankeiler branded-aankeiler--volkskrant branded-aankeiler-large branded_in-article full">
-        <a href="{{link}}">
+        <a class="branded-link" href="{{link}}">
             <div class="wrapper">
                 <div class="image-wrapper">
                     <picture class="full">
@@ -9,7 +9,11 @@
                     </picture>
                 </div>
                 <div class="content-wrapper gradient">
-                    <sub class="label label--volkskrant light"><span>{{custom.label-vk}} </span>{{sponsor.name}}</sub>
+                    <sub class="label label--volkskrant light">
+                        <div>
+                            <span>Aangeboden door </span>{{sponsor.name}}
+                        </div>
+                    </sub>
                     <header class="title">{{title}}</header>
                 </div>
             </div>

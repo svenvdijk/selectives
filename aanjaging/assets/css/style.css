@@ -1486,7 +1486,6 @@ article.branded-aankeiler {
 /*
     Aankeiler 280x280
 */
-
 article.branded-aankeiler.branded-aankeiler--parool.hmp-carousel.branded-aankeiler-square {
     height: auto;
 }
@@ -1496,7 +1495,7 @@ article:not(.hmp-carousel).branded-aankeiler.branded-aankeiler-square {
     padding: 15px;
 }
 
-article:not(.native-carousel-entry).branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-square {
+article:not(.native-carousel-entry).branded-aankeiler--volkskrant.branded-aankeiler-square {
     padding: 15px;
     margin: 0px;
 }
@@ -1788,17 +1787,21 @@ article.branded-aankeiler.branded-aankeiler-square.interview {
     margin: 15px;
 }
 
-article.branded-aankeiler.branded-aankeiler--volkskrant.interview {
-    background: #FFFAE6;
-    border-top: 8px solid #eebe01;
-    padding: 0;
-}
-
+article.branded-aankeiler.branded-aankeiler--volkskrant.interview,
 article.branded-aankeiler.branded-aankeiler--parool.interview,
 article.branded-aankeiler.branded-aankeiler--demorgen.interview,
 article.branded-aankeiler.branded-aankeiler--humo.interview {
     background: #FFFAE6;
     padding: 0;
+}
+
+article.branded-aankeiler.branded-aankeiler--volkskrant.interview {
+    border-top: 8px solid #eebe01;
+}
+
+article.branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-square.adjustable-size.interview {
+    padding: 0 5px;
+    margin: 15px;
 }
 
 article.branded-aankeiler.branded-aankeiler--trouw.interview {
@@ -2149,7 +2152,7 @@ Label
     transform: translateY(-20px);
 }
 
-/* TODO Check if border-bottom is still required */
+
 @media screen and (max-width: 639px) {
     .branded-aankeiler.branded-aankeiler--humo.half a .wrapper .content-wrapper {
         padding: 0 15px 10px;
@@ -2228,7 +2231,7 @@ Label
         font-size: 16px;
         font-weight: 700;
         color: #000;
-        line-height: 1.3;
+        line-height: 1.2;
         font-family: inherit;
     }
 
@@ -2240,6 +2243,7 @@ Label
         text-decoration: underline;
     }
 
+    .branded-aankeiler.branded-aankeiler-rectangle.interview a .wrapper .content-wrapper header, /* 300x600 Interview Creative */
     .branded-aankeiler.branded-aankeiler-rectangle.full a .wrapper .content-wrapper header { /* 300x600 Full Image */
         font-size: 22px;
         line-height: 1.2;
@@ -2252,7 +2256,7 @@ Label
 
     .branded-aankeiler.branded-aankeiler--volkskrant.branded-aankeiler-square a .wrapper .content-wrapper header,  /* Volkskrant - 280x280 */
     .branded-aankeiler.branded-aankeiler--humo.branded-aankeiler-square a .wrapper .content-wrapper header, /* HUMO 280x280 */
-    .branded-aankeiler.branded-aankeiler--demorgen.branded-aankeiler-square a .wrapper .content-wrapper header {
+    .branded-aankeiler.branded-aankeiler--demorgen.branded-aankeiler-square a .wrapper .content-wrapper header { /* Demorgen 280x280 */
         font-size: 5.86667vw;
         line-height: 6.66667vw;
     }

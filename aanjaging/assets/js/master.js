@@ -1,20 +1,94 @@
-    var teaserSize = 'half'; //renderContext.fill.creatives[0].custom.selectivesTeaser;
+    var teaserSize = 'full'; //renderContext.fill.creatives[0].custom.selectivesTeaser;
     var textPosition = 'left'; //renderContext.fill.creatives[0].custom.selectivesTextAlign;
-    var contentPosition = 'center'; //renderContext.fill.creatives[0].custom.selectivesContentLocation;
-    var rating = '5'; //TODO custom field voor de ratings aanmaken in mediavoice.com/custom_field
+    var contentPosition = 'bottom'; //renderContext.fill.creatives[0].custom.selectivesContentLocation;
+    var rating = 'none'; //renderContext.fill.creatives[0].custom.selectivesRating;
 
+
+    /* CXENSE | For all sizes
+    * Set LocalStorage with multiple values; vertical and salesteam
+    * @author: Sven van Dijk
+    * @contact: s.vandijk@persgroep.nl
+    */
+    var campaignName = renderContext.fill.creatives[0].campaigns[0].name;
+    var regexSalesTeam = /(nationaal)|(regio(naal)?)/g
+
+    // Filter
+    function isBigEnough(value) {
+        return value != null;
+    }
+
+    // Check Polar campaign name for the sales team
+    function getSalesTeam(team) {
+        team = team.toLowerCase();
+        team = team.split(/\s+/g);
+        team = team.map(team => team.match(regexSalesTeam));
+        team = team.filter(isBigEnough);
+
+        if(team.length > 0) {
+            if(team[0] == 'regio' || team[0] == 'regionaal') {
+                return 'regio';
+            } else if(team[0] == 'nationaal') {
+                return 'nationaal';
+            }
+        } else {
+            return false;
+        }
+    }
+
+    // Data object
+    var data = {
+        branche: {
+            name: 'branded_branche',
+            content: renderContext.fill.creatives[0].campaigns[0].advertiser.vertical.name
+        },
+        communication: {
+            name: 'branded_categorie',
+            content: getSalesTeam(campaignName)
+        }
+    }
+
+    // push data object to the localStorage
+    function SaveDataToLocalStorage(data) {
+        var a = [];
+        a.push(data);
+        localStorage.setItem('session', JSON.stringify(a));
+    }
+
+    // Event handler
+    function setEventListener(banner) {
+        banner.addEventListener("click", function clicked(e) {
+            e.preventDefault();
+            SaveDataToLocalStorage(data);
+        });
+    }
+
+    // Set a EventListener on all elements with the classname 'branded-link'
+    var bannerAnchor = window.top.document.getElementsByClassName('branded-link', renderContext.$template); //, renderContext.$template
+    for (var index = 0; index < bannerAnchor.length; index++) {
+        var element = bannerAnchor[index];
+        setEventListener(element)
+    }
+
+    // RATING | For all sizes
+    // The function will add a class that has been styled with an after or before depending on what newstitle.
+    // Function Created @ 16 december 2019 | By: Sven van Dijk
     function setRating(stars) {
         // Error handler
         if(typeof stars == ('undefined' || 'null') || rating == 0) {
             return false;
         }
-
+        // new class
         var ratingClassCSS = 'rating' + stars;
+        // add the new class to the title
         document.getElementsByClassName('title')[0].classList.add(ratingClassCSS)
 
     }
-    setRating(rating)
-
+    
+    if (rating != 'none') {
+        rating = parseInt(rating, 'stars');
+        setRating(rating)
+    }
+    
     /* TEASER |  For 280x280 and 300x600
         Teaser will change the display of the banners too full or half image based on data in Polar Custom Field.
     */
@@ -22,7 +96,9 @@
        $(this).addClass(teaserSize);
        $(this).find('.image-wrapper picture').addClass(teaserSize);
     }
-    $('.branded-aankeiler').teaser();
+    $('.adjustable-size').teaser(); //TODO Add a new class on the article element for the 280x280 and the 300x600
+
+
  
     /* TEXT ALIGN |  For all sizes
         Text align will change the position or the text align based on data in Polar Custom Field.
@@ -86,9 +162,7 @@
 
     /* For all sizes
         ImageSource will get the right image for the banner. The function looks at the classlist. 
-        
-        If the class 'half' or 'full' exists then it will use the source with the same data-attributes.
-        Else
+        Get the right src set based on the data attribute [data-size]
     */
    $.fn.imageSource = function() {
         var array = Array.prototype.slice.call(this);
@@ -101,10 +175,8 @@
             var anchor = array[i].childNodes[1];
             var picture = $(anchor).children('.wrapper').children('.image-wrapper').children('picture');
             picture.class = picture[0].classList;
-
-
-
             var source = $(picture).children('source');
+            
             for(var i = 0; i < source.length; i++) {
                 if(source.length > 8) {
                     break;

@@ -30,17 +30,17 @@
         branded-aankeiler--parool
         label--parool
         
-        humo: 
-        branded-aankeiler--humo
-        label--humo
+        volkskrant: 
+        branded-aankeiler--volkskrant
+        label--volkskrant
 
         de morgen: 
         branded-aankeiler--demorgen
         label--demorgen
      -->
 
-    <article class="branded-aankeiler branded-aankeiler--humo branded-aankeiler-large full">
-        <a href="{{link}}">
+    <article class="branded-aankeiler branded-aankeiler--volkskrant branded-aankeiler-large interview">
+        <a class="branded-link" href="{{link}}">
             <div class="wrapper">
                 <div class="image-wrapper">
                     <picture class="full">
@@ -48,8 +48,8 @@
                         <source srcset="{{getThumbHref width=600 height=280}}" data-size="half">
                     </picture>
                 </div>
-                <div class="content-wrapper gradient">
-                    <sub class="label label--humo light">
+                <div class="content-wrapper gradient bottom">
+                    <sub class="label label--volkskrant light">
                         <div>
                             <span>Aangeboden door </span>{{sponsor.name}}
                         </div>
